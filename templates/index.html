@@ -13,7 +13,7 @@
 <section class="latest-posts">
 <h2>Latest posts</h2>
 <ul class="archive-list">
-{% for page in posts.pages %}
+{% for page in posts.pages | slice(end=3) %}
 <li class="archive-entry">
     <a href="{{ page.path }}">{{ page.title }}</a>
     <small>({{ page.date | date(format="%Y-%m-%d") }})</small>

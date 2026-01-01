@@ -1,0 +1,16 @@
+{% macro toc(page) %}
+<nav class="toc">
+  <ul>
+    {% for h in page.toc %}
+      <li><a href="{{ h.permalink }}">{{ h.title }}</a></li>
+      {% if h.children %}
+        <ul>
+          {% for c in h.children %}
+            <li><a href="{{ c.permalink }}">{{ c.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
+{% endmacro %}

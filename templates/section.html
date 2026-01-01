@@ -1,8 +1,18 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %} {% set posts =
+get_section(path="posts/_index.md") %}
 
 <h1>{{ section.title }}</h1>
-{% for page in section.pages %}
-<ul>
-    <li><a href="{{ page.path }}">{{ page.title }}</a></li>
+<p>
+    Follow via <a href="/atom.xml">Atom/RSS</a> (<a
+        href="https://aboutfeeds.com/"
+        >Huh?</a
+    >)
+</p>
+<ul class="archive-list">
+    {% for page in posts.pages %}
+    <li class="archive-entry">
+        <a href="{{ page.path }}">{{ page.title }}</a>
+        <small>({{ page.date | date(format="%Y-%m-%d") }})</small>
+    </li>
+    {% endfor %} {% endblock %}
 </ul>
-{% endfor %} {% endblock %}

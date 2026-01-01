@@ -26,8 +26,7 @@ body {
     --dark--link-color: #5da9e9;
     --dark--blockquote-color: #eff1f8;
     --dark--blockquote-bg-color: #ffffff10;
-    --dark--code-bg-color: #ffffff0d;
-    --dark--h2-bg-color: #6d326d40;
+    --dark--code-bg-color: #ffffff00;
 
     --dark--syntax-0: #eff1f8;
     --dark--syntax-1: #5da9e9;
@@ -40,8 +39,7 @@ body {
     --light--link-color: #3980bc;
     --light--blockquote-color: #1a1a1a;
     --light--blockquote-bg-color: #eff1f866;
-    --light--code-bg-color: #eff1f8;
-    --light--h2-bg-color: #6d326d1a;
+    --light--code-bg-color: #282a36;
 
     --light--syntax-0: #1a1a1a;
     --light--syntax-1: #6d326d;
@@ -58,12 +56,6 @@ body {
         --blockquote-color: var(--dark--blockquote-color);
         --blockquote-bg-color: var(--dark--blockquote-bg-color);
         --code-bg-color: var(--dark--code-bg-color);
-        --h2-bg-color: var(--dark--h2-bg-color);
-
-        --syntax-0: var(--dark--syntax-0);
-        --syntax-1: var(--dark--syntax-1);
-        --syntax-2: var(--dark--syntax-2);
-        --syntax-3: var(--dark--syntax-3);
     }
 }
 @media (prefers-color-scheme: light) {
@@ -75,12 +67,6 @@ body {
         --blockquote-color: var(--light--blockquote-color);
         --blockquote-bg-color: var(--light--blockquote-bg-color);
         --code-bg-color: var(--light--code-bg-color);
-        --h2-bg-color: var(--light--h2-bg-color);
-
-        --syntax-0: var(--light--syntax-0);
-        --syntax-1: var(--light--syntax-1);
-        --syntax-2: var(--light--syntax-2);
-        --syntax-3: var(--light--syntax-3);
     }
 }
 
@@ -92,12 +78,6 @@ html.dark {
     --blockquote-color: var(--dark--blockquote-color);
     --blockquote-bg-color: var(--dark--blockquote-bg-color);
     --code-bg-color: var(--dark--code-bg-color);
-    --h2-bg-color: var(--dark--h2-bg-color);
-
-    --syntax-0: var(--dark--syntax-0);
-    --syntax-1: var(--dark--syntax-1);
-    --syntax-2: var(--dark--syntax-2);
-    --syntax-3: var(--dark--syntax-3);
 }
 
 html.light {
@@ -108,12 +88,6 @@ html.light {
     --blockquote-color: var(--light--blockquote-color);
     --blockquote-bg-color: var(--light--blockquote-bg-color);
     --code-bg-color: var(--light--code-bg-color);
-    --h2-bg-color: var(--light--h2-bg-color);
-
-    --syntax-0: var(--light--syntax-0);
-    --syntax-1: var(--light--syntax-1);
-    --syntax-2: var(--light--syntax-2);
-    --syntax-3: var(--light--syntax-3);
 }
 
 html {
@@ -129,6 +103,18 @@ h5,
 h6 {
     color: var(--header-color);
     line-height: 1.2;
+    margin-top: 1.4em;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit !important;
+    font-style: inherit !important;
+    font-weight: 600 !important;
 }
 
 a,
@@ -174,17 +160,26 @@ a:focus {
     font-weight: 700;
 }
 
-code {
-    padding: 3px 5px;
-    white-space: nowrap;
-    border: 1px solid var(--blockquote-color);
+.latest-posts {
+    margin: 35px 0;
 }
 
-pre,
-div.sourceCode {
+code {
+    padding: 3px 5px;
+    border: 1px solid var(--blockquote-color);
+    white-space: nowrap;
+}
+
+pre {
     padding: 8px 10px;
     overflow-x: scroll;
     color: inherit;
+    border: 1px solid var(--blockquote-color);
+}
+
+pre code {
+    white-space: inherit;
+    border: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -368,109 +363,278 @@ p {
     line-height: 1.5;
 }
 
-/* Syntax highlighting, overrides Pandoc generated styles */
-code.sourceCode span {
-    color: var(--syntax-0);
+/* Highlighting with Dracula theme as the base */
+.z-code {
+    color: #f8f8f2;
+    background-color: var(--code-bg-color);
 }
-code span.al {
-    color: var(--syntax-1);
-    font-weight: bold;
-} /* Alert */
-code span.an {
-    color: var(--syntax-0);
-    font-weight: bold;
+
+.z-comment {
+    color: #6272a4;
+}
+.z-string {
+    color: #f1fa8c;
+}
+.z-constant.z-numeric {
+    color: #bd93f9;
+}
+.z-constant.z-language {
+    color: #bd93f9;
+}
+.z-constant.z-character,
+.z-constant.z-other {
+    color: #bd93f9;
+}
+.z-variable {
+}
+.z-variable.z-other.z-readwrite.z-instance {
+    color: #ffb86c;
+}
+.z-constant.z-character.z-escaped,
+.z-constant.z-character.z-escape,
+.z-string .z-source,
+.z-string .z-source.z-ruby {
+    color: #ff79c6;
+}
+.z-source.z-ruby .z-string.z-regexp.z-classic.z-ruby,
+.z-source.z-ruby .z-string.z-regexp.z-mod-r.z-ruby {
+    color: #ff5555;
+}
+.z-keyword {
+    color: #ff79c6;
+}
+.z-storage {
+    color: #ff79c6;
+}
+.z-storage.z-type {
+    color: #8be9fd;
     font-style: italic;
-} /* Annotation */
-code span.at {
-    color: var(--syntax-3);
-} /* Attribute */
-code span.bn {
-    color: var(--syntax-3);
-} /* BaseN */
-code span.bu {
-    color: var(--syntax-3);
-} /* BuiltIn */
-code span.cf {
-    color: var(--syntax-3);
-    font-weight: bold;
-} /* ControlFlow */
-code span.ch {
-    color: var(--syntax-2);
-} /* Char */
-code span.cn {
-    color: var(--syntax-3);
-} /* Constant */
-code span.co {
-    color: var(--syntax-0);
+}
+.z-storage.z-type.z-namespace {
+    color: #8be9fd;
     font-style: italic;
-    opacity: 0.7;
-} /* Comment */
-code span.cv {
-    color: var(--syntax-2);
-    font-weight: bold;
+}
+.z-storage.z-type.z-class {
+    color: #ff79c6;
     font-style: italic;
-} /* CommentVar */
-code span.do {
-    color: var(--syntax-0);
+}
+.z-entity.z-name.z-class {
+    color: #8be9fd;
+    text-decoration: underline;
+}
+.z-meta.z-path {
+    color: #66d9ef;
+    text-decoration: underline;
+}
+.z-entity.z-other.z-inherited-class {
+    color: #8be9fd;
+    text-decoration: underline;
     font-style: italic;
-} /* Documentation */
-code span.dt {
-    color: var(--syntax-1);
-} /* DataType */
-code span.dv {
-    color: var(--syntax-3);
-} /* DecVal */
-code span.er {
-    color: var(--syntax-1);
-    font-weight: bold;
-} /* Error */
-code span.ex {
-} /* Extension */
-code span.fl {
-    color: var(--syntax-3);
-} /* Float */
-code span.fu {
-    color: var(--syntax-1);
-} /* Function */
-code span.im {
-    color: var(--syntax-3);
-    font-weight: bold;
-} /* Import */
-code span.in {
-    color: var(--syntax-3);
-    font-weight: bold;
+}
+.z-entity.z-name.z-function {
+    color: #50fa7b;
+}
+.z-variable.z-parameter {
+    color: #ffb86c;
     font-style: italic;
-} /* Information */
-code span.kw {
-    color: var(--syntax-3);
-    font-weight: bold;
-} /* Keyword */
-code span.op {
-    color: var(--syntax-2);
-} /* Operator */
-code span.ot {
-    color: var(--syntax-0);
-} /* Other */
-code span.pp {
-    color: var(--syntax-1);
-} /* Preprocessor */
-code span.sc {
-    color: var(--syntax-2);
-} /* SpecialChar */
-code span.ss {
-    color: var(--syntax-2);
-} /* SpecialString */
-code span.st {
-    color: var(--syntax-2);
-} /* String */
-code span.va {
-    color: var(--syntax-1);
-} /* Variable */
-code span.vs {
-    color: var(--syntax-2);
-} /* VerbatimString */
-code span.wa {
-    color: var(--syntax-3);
-    font-weight: bold;
+}
+.z-entity.z-name.z-tag {
+    color: #ff79c6;
+}
+.z-entity.z-other.z-attribute-name {
+    color: #50fa7b;
+}
+.z-support.z-function {
+    color: #8be9fd;
+}
+.z-support.z-constant {
+    color: #6be5fd;
+}
+.z-support.z-type,
+.z-support.z-class {
+    color: #66d9ef;
     font-style: italic;
+}
+.z-support.z-other.z-variable {
+}
+.z-support.z-other.z-namespace {
+    color: #66d9ef;
+    font-style: italic;
+}
+.z-invalid {
+    color: #f8f8f0;
+    background-color: #ff79c6;
+}
+.z-invalid.z-deprecated {
+    color: #f8f8f0;
+    background-color: #bd93f9;
+}
+.z-meta.z-structure.z-dictionary.z-json .z-string.z-quoted.z-double.z-json {
+    color: #cfcfc2;
+}
+.z-meta.z-diff,
+.z-meta.z-diff.z-header {
+    color: #6272a4;
+}
+.z-markup.z-deleted {
+    color: #ff79c6;
+}
+.z-markup.z-inserted {
+    color: #50fa7b;
+}
+.z-markup.z-changed {
+    color: #e6db74;
+}
+.z-constant.z-numeric.z-line-number.z-find-in-files {
+    color: #bd93f9;
+}
+.z-entity.z-name.z-filename {
+    color: #e6db74;
+}
+.z-message.z-error {
+    color: #f83333;
+}
+.z-punctuation.z-definition.z-string.z-begin.z-json,
+.z-punctuation.z-definition.z-string.z-end.z-json {
+    color: #eeeeee;
+}
+.z-meta.z-structure.z-dictionary.z-json .z-string.z-quoted.z-double.z-json {
+    color: #8be9fd;
+}
+.z-meta.z-structure.z-dictionary.z-value.z-json
+    .z-string.z-quoted.z-double.z-json {
+    color: #f1fa8c;
+}
+.z-meta
+    .z-meta
+    .z-meta
+    .z-meta
+    .z-meta
+    .z-meta
+    .z-meta.z-structure.z-dictionary.z-value
+    .z-string {
+    color: #50fa7b;
+}
+.z-meta
+    .z-meta
+    .z-meta
+    .z-meta
+    .z-meta
+    .z-meta.z-structure.z-dictionary.z-value
+    .z-string {
+    color: #ffb86c;
+}
+.z-meta
+    .z-meta
+    .z-meta
+    .z-meta
+    .z-meta.z-structure.z-dictionary.z-value
+    .z-string {
+    color: #ff79c6;
+}
+.z-meta .z-meta .z-meta .z-meta.z-structure.z-dictionary.z-value .z-string {
+    color: #bd93f9;
+}
+.z-meta .z-meta .z-meta.z-structure.z-dictionary.z-value .z-string {
+    color: #50fa7b;
+}
+.z-meta .z-meta.z-structure.z-dictionary.z-value .z-string {
+    color: #ffb86c;
+}
+.z-markup.z-strike {
+    color: #ffb86c;
+    font-style: italic;
+}
+.z-markup.z-bold {
+    color: #ffb86c;
+    font-weight: bold;
+}
+.z-markup.z-italic {
+    color: #ffb86c;
+    font-style: italic;
+}
+.z-markup.z-heading {
+    color: #8be9fd;
+}
+.z-punctuation.z-definition.z-list_item.z-markdown {
+    color: #ff79c6;
+}
+.z-markup.z-quote {
+    color: #6272a4;
+    font-style: italic;
+}
+.z-punctuation.z-definition.z-blockquote.z-markdown {
+    color: #6272a4;
+    background-color: #6272a4;
+    font-style: italic;
+}
+.z-meta.z-separator {
+    color: #6272a4;
+}
+.z-text.z-html.z-markdown .z-markup.z-raw.z-inline {
+    color: #50fa7b;
+}
+.z-markup.z-underline {
+    color: #bd93f9;
+    text-decoration: underline;
+}
+.z-markup.z-raw.z-block {
+    color: #cfcfc2;
+}
+.z-markup.z-raw.z-block.z-fenced.z-markdown .z-source {
+    color: #f8f8f2;
+}
+.z-punctuation.z-definition.z-fenced.z-markdown,
+.z-variable.z-language.z-fenced.z-markdown {
+    color: #6272a4;
+    font-style: italic;
+}
+.z-variable.z-language.z-fenced.z-markdown {
+    color: #6272a4;
+    font-style: italic;
+}
+.z-punctuation.z-accessor {
+    color: #ff79c6;
+}
+.z-meta.z-function.z-return-type {
+    color: #ff79c6;
+}
+.z-punctuation.z-section.z-block.z-begin {
+    color: #ffffff;
+}
+.z-punctuation.z-section.z-block.z-end {
+    color: #ffffff;
+}
+.z-punctuation.z-section.z-embedded.z-begin {
+    color: #ff79c6;
+}
+.z-punctuation.z-section.z-embedded.z-end {
+    color: #ff79c6;
+}
+.z-punctuation.z-separator.z-namespace {
+    color: #ff79c6;
+}
+.z-variable.z-function {
+    color: #50fa7b;
+}
+.z-variable.z-other {
+    color: #ffffff;
+}
+.z-variable.z-language {
+    color: #bd93f9;
+}
+.z-entity.z-name.z-module.z-ruby {
+    color: #8be9fd;
+}
+.z-entity.z-name.z-constant.z-ruby {
+    color: #bd93f9;
+}
+.z-support.z-function.z-builtin.z-ruby {
+    color: #ffffff;
+}
+.z-storage.z-type.z-namespace.z-cs {
+    color: #ff79c6;
+}
+.z-entity.z-name.z-namespace.z-cs {
+    color: #8be9fd;
 }
