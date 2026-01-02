@@ -7,4 +7,5 @@
 {% set latest_now = nows | sort(attribute="date") | last %}
 
 {{ macros::page_content(page=latest_now) }}
+
 {% endblock %}

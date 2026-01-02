@@ -13,7 +13,7 @@ dev:
 .PHONY: deploy
 deploy:
 	@echo "Deploying project..."
-	rsync -rvzP --delete --chown 80:80 out/* $(RSYNC_TARGET)
+	rsync -rvzP --delete --chown 80:80 public/* $(RSYNC_TARGET)
 
 .PHONY: clean
 clean:
