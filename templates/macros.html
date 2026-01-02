@@ -14,3 +14,15 @@
   </ul>
 </nav>
 {% endmacro %}
+
+{% macro linklog(page) %}
+{% set lh_data = load_data(path="linklog.json") %}
+<ul class="archive-list">
+{% for lh_post in lh_data.posts %}
+    <li class="archive-entry">
+    <a href="{{ lh_post.href }}">{{ lh_post.description }}</a>
+    <small>({{ lh_post.time | date(format='%Y-%m-%d') }})</small>
+    </li>
+{% endfor %}
+</ul>
+{% endmacro %}

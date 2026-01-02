@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block content %}
+{{ page.content | replace(from="<!-- linklog -->", to=macros::linklog(page=page)) | safe }}
+{% endblock %}
