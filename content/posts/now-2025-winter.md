@@ -57,7 +57,7 @@ In fact, it might be possible to design this in a way that completely does away 
 
 Office room number one is now pretty much complete. We tried to combine some of pastel colors and fun patterns, while keeping it smart and tidy.
 
-![The dopamine office](/files/dopamine_office.jpeg)
+{{ fig(src="/files/dopamine_office.jpeg", alt="The dopamine office") }}
 
 ### Backdoor clothes rack and wall feature
 
@@ -67,17 +67,17 @@ Until now, there has been nowhere to really hang our outdoor clothes nicely. The
 
 So we got the idea to repurpose the empty space in the corner, adding some visual interest with acoustic paneling as well as utility with some colorful "knobs" that you can hang coats and scarves on.
 
-![Install in progress](/files/backdoor_feature_wip.jpeg)
+{{ fig(src="/files/backdoor_feature_wip.jpeg", alt="Install in progress") }}
 
 And the final product (in completely different lighting):
 
-![An installed wood paneling with some coats hanging off of colored knobs](/files/backdoor_feature_done.jpeg)
+{{ fig(src="/files/backdoor_feature_done.jpeg", alt="An installed wood paneling with some coats hanging off of colored knobs") }}
 
 The white box is an IKEA shoebox. We keep some dog gear in there.
 
 ### Cool dog print
 
-![Cool dog](/files/taulu_koira.jpeg)
+{{ fig(src="/files/taulu_koira.jpeg", alt="Cool dog") }}
 
 ## Games
 
@@ -109,13 +109,13 @@ The white box is an IKEA shoebox. We keep some dog gear in there.
 
 Mostly [Moomin music](https://youtu.be/Bf1pR4rkPK8). I went to see the _Muumimusiikkia_ show in Musiikkitalo (Helsinki) in November, and after that I haven't been able to get Shiratori's melodies out of my head. This is a positive problem.
 
-![A photo from our seats at Musiikkitalo, showing the brochure](/files/muumimusiikkia.jpeg)
+{{ fig(src="/files/muumimusiikkia.jpeg", alt="A photo from our seats at Musiikkitalo, showing the brochure") }}
 
 ### Spotify Wrapped
 
 I feel like I'm using Spotify less and less. Might drop the subscription in the near future. I really don't like the policies they are driving.
 
-![My top genres, all over the place](/files/2025_wrapped_genres.jpeg)
+{{ fig(src="/files/2025_wrapped_genres.jpeg", alt="My top genres, all over the place") }}
 
 ## Previous update
 

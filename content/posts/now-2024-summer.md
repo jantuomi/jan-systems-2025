@@ -14,13 +14,13 @@ extra:
 
 - Started learning about wines. Organized a wine tasting. My top pick: Domaine Laroche Chablis 1er Cru Les Vaudevey 2022.
 
-![Wines from the tasting](/files/2024-wines.jpg)
+{{ fig(src="/files/2024-wines.jpg", alt="Wines from the tasting") }}
 
 ### Career
 
 - I passed the **AWS Certified Developer Associate** certificate exam! A celebratory espresso martini was in order. Planning to do **Solutions Architect Associate** next.
 
-![My hand holding an espresso martini outside in sunny weather](/files/aws-exam-drink.jpeg)
+{{ fig(src="/files/aws-exam-drink.jpeg", alt="My hand holding an espresso martini outside in sunny weather") }}
 
 ## Played games
 

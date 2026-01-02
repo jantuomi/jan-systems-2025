@@ -58,7 +58,7 @@ Turns out that there simply aren't any reasonably priced machines based on chips
 
 AliExpress, an online retailer based in China, is nice since they have a huge variety of devices at prices that would never be profitable if sold in a western shop. I would prefer to buy European in this current political atmosphere, but I'm working off a budget, and limiting my options to reputable and ethical vendors would force me to relax my requirements a lot or stop the project in its tracks altogether.
 
-![Some of the results of a "mini pc" search query](/files/aliexpress_minipc_results.png)
+{{ fig(src="/files/aliexpress_minipc_results.png", alt='Some of the results of a "mini pc" search query') }}
 
 I'm happy to notice that there is a varied selection of devices at the ~200€ price point. Some are designed to be network devices, with a bunch of physical interfaces and limited storage options, while some are clearly NAS oriented, with SATA 3.5" drive bays capable of housing two or four disks, most commonly.
 
@@ -68,7 +68,7 @@ I'm looking for something in the middle ground: I need two physical interfaces (
 
 > AliExpress tends to have multiple layers of ‼️ LIMITED SALE ‼️ and 🤑 TOP DEAL COUPON 🤑 going on at the same time. In the mobile app they also have a bunch of connect-four-type games that can score you big AliExpress Coins©. Please continue consuming.
 
-![A promotional image of the mini PC I picked, hosted here in case the product page goes poof. Please enjoy the broken English.](/files/aliexpress_minipc.png)
+{{ fig(src="/files/aliexpress_minipc.png", alt="A promotional image of the mini PC I picked, hosted here in case the product page goes poof. Please enjoy the broken English.") }}
 
 Regarding disks, I think I want to buy them locally, just in case there are issues with them. It's way less stressful to handle returns and such with a local vendor than with an overseas megacorp. I feel that stuff like RAM is pretty often OK even if bought from less reputable sources, but with disks I don't want to test my luck.
 

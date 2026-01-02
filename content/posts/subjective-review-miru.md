@@ -5,7 +5,7 @@ extra:
   kind: note
 ---
 
-![A graphic from the first pages of the Miru zine with the text ”Time to kill a god” overlaid on an imposing four-eyed figure.](/files/miru_time_to_kill_triple.jpg)
+{{ fig(src="/files/miru_time_to_kill_triple.jpg", alt="A graphic from the first pages of the Miru zine with the text ”Time to kill a god” overlaid on an imposing four-eyed figure.") }}
 
 ## TL;DR
 
@@ -31,7 +31,7 @@ With definitions out of the way, let me start by saying that _Miru is the best s
 
 ## First look
 
-![The Miru zine, polyhedral dice, various stationery and other items strewn across a dining table.](/files/miru_gameplay.jpeg)
+{{ fig(src="/files/miru_gameplay.jpeg", alt="The Miru zine, polyhedral dice, various stationery and other items strewn across a dining table.") }}
 
 Miru paints a picture of a dystopian, post-metropolitan society future where humans begrudgingly coexist with humanoid and animal-like robots. The story is kicked off in a scene where a farm worker robot kills a relative of the main character in an act of self defense when it evaluates their drunken hooliganism to be a threat. Stricken, the main character vows revenge and sets off to find out the truth about the machines’ origins.
 
@@ -69,5 +69,5 @@ With that in mind, the designer has released an official soundtrack called [Stat
 
 The concept of a soundtrack for a physical game is badass. I own one physical release of such a thing, the Mörk Borg adventure [Putrescence Regnant](https://jnohr.itch.io/putrescence-regnant), which takes the form of a highly stylized LP disc and sleeve. Very cool.
 
-![A photo of the Static Abyss minidisk in its enclosure](/files/hinokodo-static-abyss.png)
+{{ fig(src="/files/hinokodo-static-abyss.png", alt="A photo of the Static Abyss minidisk in its enclosure") }}
 Photo attribution: [Hinokodo](https://hinokodo.itch.io/static-abyss)

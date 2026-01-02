@@ -31,13 +31,13 @@ The initial idea is this:
 
 Using the install wizard, I set up the system following my rough plan. And here we go, all up and running:
 
-![Fastfetch output showing the machine specs. Disregard the uptime (I took the screenshot way later)](/files/pursotin_fastfetch.png)
+{{ fig(src="/files/pursotin_fastfetch.png", alt="Fastfetch output showing the machine specs. Disregard the uptime (I took the screenshot way later)") }}
 
 ### RAIDZ
 
 You might notice that I bought 4 x 1 TB of NVMe disks, but `fastfetch` is only showing ~2TB. That's because I set up the disks into a "RAID 1+0" configuration:
 
-![A "RAID 1+0" configuration](/files/pursotin_raidz.svg)
+{{ fig(src="/files/pursotin_raidz.svg", alt="A "RAID 1+0" configuration") }}
 
 RAID 1+0 is a combination of two RAID levels. RAID 1, or _mirror_, consumes two disks to produce one virtual disk that has the capacity of only one physical disk but can withstand the loss of either one. ZFS can automatically heal missing data in a member of a mirror by copying it over from the healthy member. RAID 0, or _stripe_, consumes two disks to produce a disk that has the capacity of the sum of its member capacities as well as double I/O speed, but fails if either member disk fails. The combination of these is a useful way to get increased speed and increased durability at the price of half your raw capacity.
 

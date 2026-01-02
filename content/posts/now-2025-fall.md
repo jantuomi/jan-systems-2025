@@ -17,11 +17,11 @@ We've also been planning the wedding that's taking place in 2026. In many ways I
 
 A lot of renovations this summer. One of the biggest ones was the translucent roofing installation:
 
-![Installing the sunroof](/files/valokate_1.jpg)
+{{ fig(src="/files/valokate_1.jpg", alt="Installing the sunroof") }}
 
 After around six hours (including breaks), it's all done! Just in time for rain.
 
-![Complete sunroof](/files/valokate_2.jpg)
+{{ fig(src="/files/valokate_2.jpg", alt="Complete sunroof") }}
 
 You can see the gnarly reddish wall in the picture. That and a bunch of other grime and residue was cleaned off as part of a neighborhood exterior painting project. The place is looking a lot nicer now from the outside (no pictures of this I'm afraid).
 
@@ -70,7 +70,7 @@ I late August I went on a company trip to Krakow, Poland for one weekend. A nice
 
 In September we had booked a trip to Italy with a group of friends. We stayed in Rome for a couple of days, enjoying the 30C heat and sights such as the Villa Borghese. We had already visited the Colosseum and the Vatican on earlier trips so we decided to avoid the queues and visit less popular places. It was the Jubileum year so many sights were jam-packed. After that we got a rental and drove ~500km south to Calabria, where we spent the next week at a really nice villa overlooking the sea.
 
-![The view from the villa](/files/villa.jpeg)
+{{ fig(src="/files/villa.jpeg", alt="The view from the villa") }}
 
 Later in September I attended EuroBSDCon 2025 in Zagreb, Croatia. A lot of great talks and lab sessions! I might write a conference notes post about the trip.
 

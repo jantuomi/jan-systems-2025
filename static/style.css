@@ -243,7 +243,6 @@ figure figcaption {
     font-style: italic;
     text-align: center;
     margin: 7px auto 15px;
-    max-width: 550px;
     padding: 0 10px;
     color: var(--blockquote-color);
 }

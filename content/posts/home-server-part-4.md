@@ -19,7 +19,7 @@ I already have a private network (`192.168.0.0/16`) that uses my pfSense router 
 
 The host will also be connected directly to the ISP's network using its second interface (`wan0`). This interface will get its IP using DHCP. Packets to the internet, as well as packets to public services running on the FreeBSD host go through this interface.
 
-![A simplified diagram showing the two interfaces](/files/pursotin_network.svg)
+{{ fig(src="/files/pursotin_network.svg", alt="A simplified diagram showing the two interfaces") }}
 
 A dual interface set up like this is simple in theory, but there are important nuances, e.g. regarding return traffic routing and DNS.
 

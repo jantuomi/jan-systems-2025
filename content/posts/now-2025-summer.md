@@ -7,7 +7,7 @@ extra:
   kind: now
 ---
 
-![A torii gate in the Kenroku-en garden](/files/kenrokuen.jpg)
+{{ fig(src="/files/kenrokuen.jpg", alt="A torii gate in the Kenroku-en garden") }}
 
 ## AutereDB project
 
@@ -37,7 +37,7 @@ Me and my fiancée made a long-awaited trip to Japan in the spring. We landed in
 
 We traveled the central island, Honshū, for three weeks. Mostly by train, but also by bus. We visited Ōsaka, Nara, Kyōto, Gifu-Takayama, Kanazawa and finally Tōkyō. This route skips the popular south-coast bullet train connection, instead going north through the mountains.
 
-![The garden of a preserved samurai family home, with a koi fish pond and stone lantern](/files/samurai_garden.jpeg)
+{{ fig(src="/files/samurai_garden.jpeg", alt="The garden of a preserved samurai family home, with a koi fish pond and stone lantern") }}
 
 I got to finally test my Japanese. Speaking was very laborious at first, but it got way easier the more I got to practise. My vocabulary didn't improve that much, but what improved were things like _cadence_, _[aizuchi](https://en.wikipedia.org/wiki/Aizuchi)_, and ability to respond with more natural word choices. Big up to active listening and copying native speakers.
 
@@ -45,7 +45,7 @@ We ate and drank well. We mostly gravitated towards traditional-style, or _washo
 
 Something to note: pickled veggies go great with meat-centered, hearty meals. We were eager to implement this in our home cooking as soon as we got home.
 
-![Wagyu beef, mushroom and peppers on a tabletop charcoal grill](/files/wagyu_grill.jpeg)
+{{ fig(src="/files/wagyu_grill.jpeg", alt="Wagyu beef, mushroom and peppers on a tabletop charcoal grill") }}
 
 We visited the obligatory tourist spots, like the _Thousand torī gates_ in Kyōto, and the _Dōtonbori shopping street_ in Ōsaka. We like seeing sights, but we know that our most memorable experiences have always come naturally from exploration and keeping an open mind. That's why we spent only a fraction of our time visiting Tripadvisor locations and most of the time wandering around, following local recommendations and keeping our eyes, ears and nostrils peeled.
 
