@@ -14,7 +14,7 @@ extra:
 
 This is the second post in a blog series chronicling my progress with designing and setting up a new, physical FreeBSD home server. Last time we went over my motivations, and this time we're looking at the physical hardware.
 
-Check out episode [1](../archive/home-server-part-1).
+Check out episode [1](/posts/home-server-part-1).
 
 {{ toc() }}
 

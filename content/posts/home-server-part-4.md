@@ -9,7 +9,7 @@ extra:
 
 This is the fourth episode in a series where I set up a FreeBSD home server, explaining all the steps, problems and solutions along the way. This time we're setting up the networking.
 
-Check out episodes [1](../archive/home-server-part-1), [2](../archive/home-server-part-2), [3](../archive/home-server-part-3).
+Check out episodes [1](/posts/home-server-part-1), [2](/posts/home-server-part-2), [3](/posts/home-server-part-3).
 
 {{ toc() }}
 

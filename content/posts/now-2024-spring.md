@@ -14,14 +14,14 @@ Your browser does not support the video tag.
 
 ## Travel
 
-- Attended the [QCon London 2024](../archive/qcon-london-2024-takeaways) in London
+- Attended the [QCon London 2024](/posts/qcon-london-2024-takeaways) in London
 - Went to [Tahko](https://www.tahko.com/en/) for a company leisure trip to downhill ski and snowmobile
 
 ## Music
 
 [BLEK](../projects#blek) was live for 3 hours on student radio Radiodiodi with a dungeon synth genre deepdive program. According to metrics, 20 people (!) were listening to our show, which was also our grand EP premiere. Big leagues.
 
-I bought a [cassette player](../archive/cassettes) and a bunch of metal and dungeon synth tapes, as well some empty ones from the Bezos shop. I'm planning to record BLEK's music on some of them.
+I bought a [cassette player](/posts/cassettes) and a bunch of metal and dungeon synth tapes, as well some empty ones from the Bezos shop. I'm planning to record BLEK's music on some of them.
 
 ## Games
 
@@ -80,4 +80,4 @@ Things I still want to add:
 
 ## Previous update
 
-[❄️ Now, winter 2023](../archive/now-2023-winter)
+[❄️ Now, winter 2023](/posts/now-2023-winter)

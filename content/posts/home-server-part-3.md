@@ -9,7 +9,7 @@ extra:
 
 This is the third episode in a series where I set up a FreeBSD home server, explaining all the steps, problems and solutions along the way. This time we're installing the OS for the first time.
 
-Check out episodes [1](../archive/home-server-part-1) and [2](../archive/home-server-part-2).
+Check out episodes [1](/posts/home-server-part-1) and [2](/posts/home-server-part-2).
 
 {{ toc() }}
 

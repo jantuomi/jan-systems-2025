@@ -5,7 +5,7 @@ extra:
   kind: note
 ---
 
-I have a website authoring system that involves Obsidian sync and a hand-crafted static site generator (SSG) [written in Scheme](../archive/deploying-the-garden) that:
+I have a website authoring system that involves Obsidian sync and a hand-crafted static site generator (SSG) [written in Scheme](/posts/deploying-the-garden) that:
 
 - syncs Markdown files to my VPS
 - compiles Markdown source files into HTML pages using pandoc
@@ -36,6 +36,6 @@ I would like to add a new feature: rendering recent links from [my linkhut profi
 
 ### Approach
 
-In the light of my [most recent post](../archive/pile-of-incomplete-projects) I should fight the urge to rewrite the thing in Rust. However, I really want to get rid of pandoc.
+In the light of my [most recent post](/posts/pile-of-incomplete-projects) I should fight the urge to rewrite the thing in Rust. However, I really want to get rid of pandoc.
 
 As such, I will probably RiiR at some point, using a [markdown library](https://github.com/wooorm/markdown-rs) instead of pandoc.

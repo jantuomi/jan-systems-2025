@@ -84,4 +84,4 @@ So, a lot of traveling in a short timespan, so I've been feeling quite exhausted
 
 ## Previous update
 
-- [☀️ Now, summer 2025](../archive/now-2025-summer)
+- [☀️ Now, summer 2025](/posts/now-2025-summer)

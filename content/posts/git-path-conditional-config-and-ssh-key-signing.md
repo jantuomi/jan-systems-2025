@@ -36,7 +36,7 @@ I personally use separate Git identities and SSH keys for personal and work proj
     gpgsign = true
 ```
 
-I'm happy that this is supported natively, so I don't have to use any wrapper scripts, such as those described in [a previous note](../archive/directory-aware-git).
+I'm happy that this is supported natively, so I don't have to use any wrapper scripts, such as those described in [a previous note](/posts/directory-aware-git).
 
 ## SSH key signing
 

@@ -51,4 +51,4 @@ extra:
 
 ## Previous update
 
-- [🌱 Now, spring 2024](../archive/now-2024-spring)
+- [🌱 Now, spring 2024](/posts/now-2024-spring)

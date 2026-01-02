@@ -119,4 +119,4 @@ I feel like I'm using Spotify less and less. Might drop the subscription in the 
 
 ## Previous update
 
-- [🍁 Now, fall 2025](../archive/now-2025-fall)
+- [🍁 Now, fall 2025](/posts/now-2025-fall)

@@ -2,15 +2,7 @@
 {% import "macros.html" as macros %}
 {% block content %}
 
-<h1>
-    {{ page.title }}<br />
-    {% if page.date %}
-    <small>({{ page.date }})</small>
-    {% endif %}
-    <small>[{{ page.extra.kind }}]</small>
-</h1>
-
-{{ page.content | replace(from="<!-- toc -->", to=macros::toc(page=page)) | safe }}
+{{ macros::page_content(page=page) }}
 
 <nav class="post-nav" aria-label="Post navigation">
     {% if page.higher %}

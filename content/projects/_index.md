@@ -25,7 +25,7 @@ A CLI tool for communicating with a [Desmofylakas API](https://github.com/poksia
 
 ### [Diddle](diddle)
 
-A minimalist, performant, accessibility-focused Doodle alternative. See [post](../archive/diddle-event-scheduler).
+A minimalist, performant, accessibility-focused Doodle alternative. See [post](/posts/diddle-event-scheduler).
 
 ### [Learning Japanese](learning-japanese)
 

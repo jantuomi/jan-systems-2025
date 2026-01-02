@@ -107,4 +107,4 @@ Mostly FreeBSD stuff by [Michael W. Lucas](https://mwl.io/nonfiction/os).
 
 ## Previous update
 
-- [🍁 Now, fall 2024](../archive/now-2024-fall)
+- [🍁 Now, fall 2024](/posts/now-2024-fall)

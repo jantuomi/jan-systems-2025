@@ -5,7 +5,7 @@ extra:
   kind: note
 ---
 
-> Update 2024-12-22: The functionality described here is available natively in modern versions of Git, see more recent note [Path-conditional config and SSH key signing in `git`](../archive/git-path-conditional-config-and-ssh-key-signing).
+> Update 2024-12-22: The functionality described here is available natively in modern versions of Git, see more recent note [Path-conditional config and SSH key signing in `git`](/posts/git-path-conditional-config-and-ssh-key-signing).
 
 > Update 2024-05-10: Fixed a bug in the provided script.
 

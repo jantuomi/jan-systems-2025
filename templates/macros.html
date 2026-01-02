@@ -26,3 +26,20 @@
 {% endfor %}
 </ul>
 {% endmacro %}
+
+{% macro page_h1(page) %}
+<h1>
+    {{ page.title }}<br />
+    {% if page.date %}
+    <small>({{ page.date }})</small>
+    {% endif %}
+    {% if page.extra.kind %}
+    <small>[{{ page.extra.kind }}]</small>
+    {% endif %}
+</h1>
+{% endmacro %}
+
+{% macro page_content(page) %}
+{{ self::page_h1(page=page) }}
+{{ page.content | replace(from="<!-- toc -->", to=macros::toc(page=page)) | safe }}
+{% endmacro %}

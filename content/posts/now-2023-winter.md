@@ -9,7 +9,7 @@ extra:
 
 - Working on this site
 - Doing small renovations and fixes to the house
-- Learning Chicken Scheme and using it to build [desmoctl](/projects#desmoctl) and [this website](/archive/deploying-the-garden)
+- Learning Chicken Scheme and using it to build [desmoctl](/projects#desmoctl) and [this website](/posts/deploying-the-garden)
 - Reading _Category Theory for Programmers_ by Bartosz Milewski
 
 ## Recently

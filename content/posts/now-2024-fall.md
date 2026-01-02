@@ -82,4 +82,4 @@ Enjoyed watching:
 
 ## Previous update
 
-- [🌞 Now, summer 2024](../archive/now-2024-summer)
+- [🌞 Now, summer 2024](/posts/now-2024-summer)
