@@ -10,8 +10,7 @@
     <small>[{{ page.extra.kind }}]</small>
 </h1>
 
-{{ page.content | replace(from="<!-- toc -->", to=macros::toc(page=page)) | safe
-}}
+{{ page.content | replace(from="<!-- toc -->", to=macros::toc(page=page)) | safe }}
 
 <nav class="post-nav" aria-label="Post navigation">
     {% if page.higher %}

@@ -12,25 +12,37 @@
             name="author"
             content="{{ page.author | default(value=config.author) }}"
         />
+
         {% if page.date %}
         <meta name="dcterms.date" content="{{ page.date }}" />
-        {% endif %} {% if page.extra.keywords %}
+        {% endif %}
+
+        {% if page.extra.keywords %}
         <meta
             name="keywords"
             content="{{ page.extra.keywords | join(sep=', ') }}"
         />
-        {% endif %} {% block title %} {% if page.title %}
+        {% endif %}
+
+        {% block title %}
+        {% if page.title %}
         <title>{{ page.title }} — {{ config.title }}</title>
+        {% elif section.title %}
+        <title>{{ section.title }} — {{ config.title }}</title>
         {% else %}
         <title>{{ config.title }}</title>
-        {% endif %} {% endblock %} {% block description %} {% if
-        page.description %}
+        {% endif %}
+        {% endblock %}
+
+        {% block description %}
+        {% if page.description %}
         <meta name="description" content="{{ page.description }}" />
         {% elif page.summary %}
         <meta name="description" content="{{ page.summary | striptags }}" />
         {% else %}
         <meta name="description" content="{{ config.description }}" />
-        {% endif %} {% endblock %}
+        {% endif %}
+        {% endblock %}
 
         <style>
             @font-face {
