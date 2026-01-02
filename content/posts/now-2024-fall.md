@@ -1,9 +1,12 @@
 ---
 title: 🍁 Now, fall 2024
 date: 2024-12-10
+description: Dog dug up the yard and the new grass. Painted some rooms. Built a little bathroom shelf, a little nightstand and a sound diffuser.
 extra:
   kind: now
 ---
+
+{{ toc() }}
 
 ## Home
 

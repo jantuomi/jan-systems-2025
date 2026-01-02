@@ -2,13 +2,20 @@
 title: ❄️ Now, winter 2025
 date: 2025-12-16
 description: |
-  <p>Fall has gone by, fast. Mostly rain and darkness.</p>
-  <p>Managing the estate of my late father has taken up a lot of time I would've otherwise spent on hobbies.</p>
-  <p>Some decor and reno at home, some game programming, a lot of games. Game design has been on my mind a lot lately.</p>
-  <p>I also attended my first ever Finnish defence forces reserves repetition exercise. I had a good time!</p>
+  Fall has gone by, fast. Mostly rain and darkness. Managing the estate of my late father has taken up a lot of time I would've otherwise spent on hobbies.
 extra:
   kind: now
 ---
+
+Fall has gone by, fast. Mostly rain and darkness.
+
+Managing the estate of my late father has taken up a lot of time I would've otherwise spent on hobbies.
+
+Some decor and reno at home, some game programming, a lot of games. Game design has been on my mind a lot lately.
+
+I also attended my first ever Finnish defence forces reserves repetition exercise. I had a good time!
+
+{{ toc() }}
 
 ## Metroidvania game dev
 

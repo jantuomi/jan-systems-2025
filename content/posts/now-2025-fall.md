@@ -1,6 +1,7 @@
 ---
 title: 🍁 Now, fall 2025
 date: 2025-10-05
+description: Late summer and early autumn have been a time of ups and downs.
 extra:
   kind: now
 ---
@@ -12,6 +13,8 @@ I lost my father to illness. The passing was expected, in a way, so I have had t
 Sorting out things after the death has taken a lot of time and effort, but things are now more or less in order. I have got a lot of support and help from my peers, and I feel I have let myself process the grief well. I try to focus on positive things.
 
 We've also been planning the wedding that's taking place in 2026. In many ways I feel out of my element, but things are moving forward.
+
+{{ toc() }}
 
 ## Home
 

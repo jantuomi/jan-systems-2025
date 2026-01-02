@@ -9,6 +9,10 @@ extra:
 
 {{ fig(src="/files/kenrokuen.jpg", alt="A torii gate in the Kenroku-en garden") }}
 
+Here's three seasons of updates in one package.
+
+{{ toc() }}
+
 ## AutereDB project
 
 I was reading [Designing Data-intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) and I came across a chapter where the author goes over log-structured database architecture. I knew about B-tree based systems, but this seemingly simpler approach was new to me. I was intrigued, but I also felt like I didn't fully grok how every cog in the theoretical database machine worked together.

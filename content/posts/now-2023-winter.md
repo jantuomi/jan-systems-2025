@@ -1,9 +1,12 @@
 ---
 title: ❄️ Now, winter 2023
 date: 2023-01-30
+description: Working on this site. Doing small renovations and fixes to the house. Learning Chicken Scheme. Reading Category Theory for Programmers by Bartosz Milewski.
 extra:
   kind: now
 ---
+
+{{ toc() }}
 
 ## Currently
 
@@ -22,7 +25,7 @@ extra:
 
 ### 2024
 
-- _A Retargetable C Compiler: Design And Implementation_ by David Hanson, Christopher Fraser. The book defines the `lcc` ANSI C compiler, which I have considered writing a custom backend for in the [ATK16](/projects#ATK16) project.
+- _A Retargetable C Compiler: Design And Implementation_ by David Hanson, Christopher Fraser. The book defines the `lcc` ANSI C compiler, which I have considered writing a custom backend for in the [ATK16](/projects/atk16) project.
 - [Beej's Guide to Networking Concepts](https://beej.us/guide/bgnet0/)
 - _How to Win Friends and Influence People in the Digital Age_ by Dale Carnegie, a 2012 adaptation of the classic
 - _Gödel, Escher, Bach: An Eternal Golden Braid_ by Douglas Hofstaedter

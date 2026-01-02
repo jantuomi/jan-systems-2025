@@ -5,6 +5,8 @@ extra:
   kind: now
 ---
 
+{{ toc() }}
+
 ## Home
 
 - Yard work: some small landscaping, changed the topsoil to something less dry, and planted grass and flowers.

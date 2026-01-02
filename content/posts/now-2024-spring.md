@@ -1,6 +1,7 @@
 ---
 title: 🌱 Now, spring 2024
 date: 2024-04-22
+description: Inches of snow are falling on the yard, covering any new green growths. The dog likes it, I don't.
 extra:
   kind: now
 ---
@@ -12,6 +13,8 @@ Inches of snow are falling on the yard, covering any new green growths. The dog 
 Your browser does not support the video tag.  
 </video>
 
+{{ toc() }}
+
 ## Travel
 
 - Attended the [QCon London 2024](/posts/qcon-london-2024-takeaways) in London
@@ -19,7 +22,7 @@ Your browser does not support the video tag.
 
 ## Music
 
-[BLEK](../projects#blek) was live for 3 hours on student radio Radiodiodi with a dungeon synth genre deepdive program. According to metrics, 20 people (!) were listening to our show, which was also our grand EP premiere. Big leagues.
+[BLEK](/projects#blek) was live for 3 hours on student radio Radiodiodi with a dungeon synth genre deepdive program. According to metrics, 20 people (!) were listening to our show, which was also our grand EP premiere. Big leagues.
 
 I bought a [cassette player](/posts/cassettes) and a bunch of metal and dungeon synth tapes, as well some empty ones from the Bezos shop. I'm planning to record BLEK's music on some of them.
 
@@ -53,7 +56,7 @@ I went to see Dune 2. It was as ok as the first part.
 
 ### ATK16
 
-Picked up [ATK16](../projects#atk16) again, adding some major stuff:
+Picked up [ATK16](/projects/atk16) again, adding some major stuff:
 
 - A calling convention for functions: arguments in registers `RA`–`RG`, return value in register `RG`
 - An emulator & step debugger in Python + Pygame for easier debugging
@@ -75,7 +78,8 @@ Now, the flow starts by traversing the entire content directory and indexing it 
 
 Things I still want to add:
 
-- A bookmarking system, maybe somehow connected to the [liked](../liked) page?
+- A bookmarking system, maybe somehow connected to the ~[liked](/liked) page~?
+  - _Update from the future_: the liked page was migrated to the [linklog](/linklog).
 - A project page structure (just a content thing, no code required)
 
 ## Previous update
