@@ -1,21 +1,30 @@
-{% extends "base.html" %}
-{% import "macros.html" as macros %}
-{% block content %}
+{% extends "base.html" %} {% import "macros.html" as macros %} {% block content
+%}
 
 <h1>
     {{ page.title }}<br />
+    {% if page.date %}
     <small>({{ page.date }})</small>
+    {% endif %}
     <small>[{{ page.extra.kind }}]</small>
 </h1>
 
-{{ page.content | replace(from="<!-- toc -->", to=macros::toc(page=page)) | safe }}
+{{ page.content | replace(from="<!-- toc -->", to=macros::toc(page=page)) | safe
+}}
 
 <nav class="post-nav" aria-label="Post navigation">
     {% if page.higher %}
-    <div class="post-nav-left"><a class="post-nav-link" href="{{ page.higher.permalink }}">← {{ page.higher.title }}</a></div>
-    {% endif %}
-    {% if page.lower %}
-    <div class="post-nav-right"><a class="post-nav-link" href="{{ page.lower.permalink }}">{{ page.lower.title }} →</a></div>
+    <div class="post-nav-left">
+        <a class="post-nav-link" href="{{ page.higher.permalink }}"
+            >← {{ page.higher.title }}</a
+        >
+    </div>
+    {% endif %} {% if page.lower %}
+    <div class="post-nav-right">
+        <a class="post-nav-link" href="{{ page.lower.permalink }}"
+            >{{ page.lower.title }} →</a
+        >
+    </div>
     {% endif %}
 </nav>
 
