@@ -54,7 +54,7 @@ extra:
 - a software emulator for running the built software on your development machine
 - a register transfer logic (RTL) model designed in [Digital](https://github.com/hneemann/Digital) capable of running the built software
 
-{{ fig(src="../files/atk16-block-diagram.svg", alt="ATK16 block diagram") }}
+{{ fig(src="/files/atk16-block-diagram.svg", alt="ATK16 block diagram") }}
 
 The idea for the project hatched from my admiration for [Ben Eater](https://eater.net/) and his DIY CPU and video card projects. I was enamoured by the elegance of his systems and simply wanted to do something similar. I had none of the required knowledge for this kind of low-level CPU design work, but I had studied digital electronics for a bit in university.
 
@@ -291,7 +291,7 @@ On startup, the _graphics mode_ memory register is set to disabled (0). To activ
 
 The TPU is a graphics processor that produces a 40 x 30 character VGA output signal.
 
-{{ fig(src="../files/atk16-text-mode.png", alt="A screenshot of a text mode program displaying a work-in-progress hardware monitor") }}
+{{ fig(src="/files/atk16-text-mode.png", alt="A screenshot of a text mode program displaying a work-in-progress hardware monitor") }}
 The TPU has 3 major components:
 
 - The character memory (ROM)
