@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p><br>
+    <a href="/files/Jan_Tuomi_headshot.jpg"><img src="/files/Jan_Tuomi_headshot_220.jpg" style="float: right; width: 175px; margin: 0 0 0 20px;"></a>
+    Hi! My name is Jan. I am a senior software engineer based in Finland. Welcome to my personal blog and digital garden<a href="#footnote-digital-garden">¹</a>.
+</p>
+<p>I like keeping things simple and pragmatic. I'm a life-long learner, but I don't go chasing trends.</p>
+<p>I enjoy spending time with my fiancée and our dog, tinkering with computer hardware and software, games of all kinds but mostly video-, tabletop and role-playing, electronics, music, language learning and linguistics.</p>
+<p>I created this site<a href="#footnote-site">²</a> as a creative outlet for expressing myself and sharing my experiences.</p>
+
+{% set posts = get_section(path="posts/_index.md") %}
+<section class="latest-posts">
+<h2>Latest posts</h2>
+<ul class="archive-list">
+{% for page in posts.pages %}
+<li class="archive-entry">
+    <a href="{{ page.path }}">{{ page.title }}</a>
+    <small>({{ page.date | date(format="%Y-%m-%d") }})</small>
+</li>
+{% endfor %}
+</section>
+
+<p>The <a href="/posts">posts</a> page is a listing of my posts. I post sporadically about various subjects and with varying levels of effort.</p>
+<p>The <a href="/linklog">linklog</a> page contains a curated aggregation of bookmarks, saved blog posts and essays, books, series, papers or anything else that I feel like sharing or recommending, stored in <a href="https://ln.ht/~jant">Linkhut</a>.</p>
+<p>On the <a href="/now">now</a> page I write what's currently going on in my life. Stuff that some would write onto their social media page.</p>
+<p>The <a href="/projects">projects</a> page contains info about my hobby projects.</p>
+
+<div style="display: flex; flex-flow: row wrap; justify-content: space-between; margin: 0 -16px;">
+<div style="flex: 1; margin: 0 16px; min-width: 300px;">
+<h2>Contact</h2>
+<ul>
+<li><a href="https://fi.linkedin.com/in/jantuomi">LinkedIn</a> (jantuomi)</li>
+<li><a href="https://dice.camp/@kal_jan">Mastodon</a> (dice.camp/@kal_jan)</li>
+<li>Email (jan <i>at</i> jantuomi <i>dot</i> fi)</li>
+<li><a href="https://kal-jan.itch.io/">itch.io</a> (kal_jan)</li>
+<li><a href="https://github.com/jantuomi" rel="me">Github</a> (jantuomi)</li>
+</ul>
+</div>
+<div style="flex: 1; margin: 0 16px; min-width: 300px;" class="webrings">
+<h2>Webrings</h2>
+<a href="https://xn--sr8hvo.ws/previous">←</a>
+An <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> <span style="font-family: initial">💍</span>
+<a href="https://xn--sr8hvo.ws/next">→</a>
+<br>
+<a href="https://fediring.net/previous?host=jan.systems">←</a>
+<a href="https://fediring.net/">Fediring</a>
+<a href="https://fediring.net/next?host=jan.systems">→</a>
+
+</div>
+</div>
+
+<hr>
+
+<p id="footnote-digital-garden">
+[1] <em>The phrase "digital garden" is a metaphor for thinking about writing and creating that focuses less on the resulting "showpiece" and more on the process, care, and craft it takes to get there. — <a href="https://joelhooks.com/digital-garden/">Joel Hooks</a></em>
+</p>
+
+<p id="footnote-site">
+[2] This site is written using the <a href="https://www.getzola.org/">Zola</a> static site generator. <a href="/posts/deploying-the-garden">At first</a>, the site was automatically deployed after every Markdown edit, but nowadays I use a more traditional manual deploy mechanism.
+</p>
+
+
+{% endblock %}

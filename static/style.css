@@ -1,0 +1,476 @@
+body {
+    font-size: 17px;
+    margin: 20px auto 50px;
+    padding: 10px 15px;
+    max-width: 800px;
+
+    font-family:
+        "PT Sans",
+        -apple-system,
+        system-ui,
+        BlinkMacSystemFont,
+        sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    line-height: 1.5;
+
+    hyphens: initial;
+}
+
+:root {
+    --dark--bg-color: #1b1f29;
+    --dark--p-color: #eff1f8;
+    --dark--header-color: #ffffff;
+    --dark--link-color: #5da9e9;
+    --dark--blockquote-color: #eff1f8;
+    --dark--blockquote-bg-color: #ffffff10;
+    --dark--code-bg-color: #ffffff0d;
+    --dark--h2-bg-color: #6d326d40;
+
+    --dark--syntax-0: #eff1f8;
+    --dark--syntax-1: #5da9e9;
+    --dark--syntax-2: #f8b67b;
+    --dark--syntax-3: #b884b8;
+
+    --light--bg-color: #ffffff;
+    --light--p-color: #1a1a1a;
+    --light--header-color: #003f91;
+    --light--link-color: #3980bc;
+    --light--blockquote-color: #1a1a1a;
+    --light--blockquote-bg-color: #eff1f866;
+    --light--code-bg-color: #eff1f8;
+    --light--h2-bg-color: #6d326d1a;
+
+    --light--syntax-0: #1a1a1a;
+    --light--syntax-1: #6d326d;
+    --light--syntax-2: #3980bc;
+    --light--syntax-3: #003f91;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --header-color: var(--dark--header-color);
+        --p-color: var(--dark--p-color);
+        --link-color: var(--dark--link-color);
+        --bg-color: var(--dark--bg-color);
+        --blockquote-color: var(--dark--blockquote-color);
+        --blockquote-bg-color: var(--dark--blockquote-bg-color);
+        --code-bg-color: var(--dark--code-bg-color);
+        --h2-bg-color: var(--dark--h2-bg-color);
+
+        --syntax-0: var(--dark--syntax-0);
+        --syntax-1: var(--dark--syntax-1);
+        --syntax-2: var(--dark--syntax-2);
+        --syntax-3: var(--dark--syntax-3);
+    }
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --header-color: var(--light--header-color);
+        --p-color: var(--light--p-color);
+        --link-color: var(--light--link-color);
+        --bg-color: var(--light--bg-color);
+        --blockquote-color: var(--light--blockquote-color);
+        --blockquote-bg-color: var(--light--blockquote-bg-color);
+        --code-bg-color: var(--light--code-bg-color);
+        --h2-bg-color: var(--light--h2-bg-color);
+
+        --syntax-0: var(--light--syntax-0);
+        --syntax-1: var(--light--syntax-1);
+        --syntax-2: var(--light--syntax-2);
+        --syntax-3: var(--light--syntax-3);
+    }
+}
+
+html.dark {
+    --header-color: var(--dark--header-color);
+    --p-color: var(--dark--p-color);
+    --link-color: var(--dark--link-color);
+    --bg-color: var(--dark--bg-color);
+    --blockquote-color: var(--dark--blockquote-color);
+    --blockquote-bg-color: var(--dark--blockquote-bg-color);
+    --code-bg-color: var(--dark--code-bg-color);
+    --h2-bg-color: var(--dark--h2-bg-color);
+
+    --syntax-0: var(--dark--syntax-0);
+    --syntax-1: var(--dark--syntax-1);
+    --syntax-2: var(--dark--syntax-2);
+    --syntax-3: var(--dark--syntax-3);
+}
+
+html.light {
+    --header-color: var(--light--header-color);
+    --p-color: var(--light--p-color);
+    --link-color: var(--light--link-color);
+    --bg-color: var(--light--bg-color);
+    --blockquote-color: var(--light--blockquote-color);
+    --blockquote-bg-color: var(--light--blockquote-bg-color);
+    --code-bg-color: var(--light--code-bg-color);
+    --h2-bg-color: var(--light--h2-bg-color);
+
+    --syntax-0: var(--light--syntax-0);
+    --syntax-1: var(--light--syntax-1);
+    --syntax-2: var(--light--syntax-2);
+    --syntax-3: var(--light--syntax-3);
+}
+
+html {
+    color: var(--p-color);
+    background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--header-color);
+    line-height: 1.2;
+}
+
+a,
+a:visited {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: normal;
+    cursor: pointer;
+    text-underline-position: under;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+#dark-mode-btn {
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.header-row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 30px 0;
+}
+
+.header-row h1 {
+    margin: 0;
+}
+
+.page-title {
+    text-decoration: none;
+    color: var(--header-color) !important;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+code {
+    padding: 3px 5px;
+    white-space: nowrap;
+    border: 1px solid var(--blockquote-color);
+}
+
+pre,
+div.sourceCode {
+    padding: 8px 10px;
+    overflow-x: scroll;
+    color: inherit;
+}
+
+@media screen and (max-width: 600px) {
+    pre,
+    div.sourceCode {
+        margin: 20px -15px;
+    }
+}
+
+.sourceCode {
+    line-height: 1.3;
+    border: 1px solid var(--blockquote-color);
+}
+
+.sourceCode code,
+.sourceCode pre {
+    border: none;
+    min-width: max-content;
+}
+
+blockquote {
+    display: block;
+    color: var(--blockquote-color);
+    border-left: 10px solid var(--link-color);
+    margin: 20px 0;
+    padding: 2px 15px;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+blockquote p {
+    margin: 10px 0;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    margin: 20px 0;
+}
+
+figure {
+    max-width: 100%;
+    padding: 0;
+    margin: 20px 0;
+    display: block;
+    border: 1px solid var(--p-color);
+}
+
+@media screen and (max-width: 600px) {
+    figure {
+        max-width: calc(100% + 2 * 15px);
+        margin: 20px -15px;
+    }
+}
+
+figure img {
+    margin: 0;
+    border-bottom: 1px solid var(--p-color);
+}
+
+figure figcaption {
+    font-style: italic;
+    text-align: center;
+    margin: 7px auto 15px;
+    max-width: 550px;
+    padding: 0 10px;
+    color: var(--blockquote-color);
+}
+
+hr {
+    background: none !important;
+    height: 0;
+    margin: 40px auto;
+    border: none;
+    border-top: 2px dotted var(--header-color) !important;
+    width: 50%;
+}
+
+.nojs-hidden {
+    display: none;
+}
+
+small {
+    color: var(--blockquote-color);
+}
+
+h1 small {
+    opacity: 0.65;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+ul,
+ol {
+    margin-left: 10px;
+}
+
+li::marker {
+    color: var(--link-color);
+}
+
+.webrings p {
+    margin: 0 !important;
+}
+
+.archive-list {
+    margin-left: 15px;
+    padding-left: 0;
+}
+
+.archive-entry {
+    list-style: disclosure-closed;
+    margin-bottom: 8px;
+}
+
+.archive-entry a {
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.archive-entry small {
+    margin-top: -10px;
+    display: block;
+    font-size: 16px;
+}
+
+.archive-entry small span {
+    color: var(--header-color);
+}
+
+/* Post navigation (previous/next) */
+.post-nav {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.post-nav-left {
+    flex: 1;
+    text-align: left;
+}
+
+.post-nav-right {
+    flex: 1;
+    text-align: right;
+}
+
+.post-nav-link {
+    display: inline-block;
+}
+
+table td {
+    width: 1%; /* I have no idea why this makes columns responsive width */
+    min-width: 150px;
+}
+
+th {
+    border-top: none;
+}
+
+tbody {
+    border-bottom: none;
+    border-top: 2px solid var(--blockquote-color);
+}
+
+table .odd {
+    background-color: var(--blockquote-bg-color);
+}
+
+table {
+    margin: 20px 0 30px;
+}
+
+table tr {
+    border-bottom: 1px dotted var(--p-color);
+}
+
+p {
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+/* Syntax highlighting, overrides Pandoc generated styles */
+code.sourceCode span {
+    color: var(--syntax-0);
+}
+code span.al {
+    color: var(--syntax-1);
+    font-weight: bold;
+} /* Alert */
+code span.an {
+    color: var(--syntax-0);
+    font-weight: bold;
+    font-style: italic;
+} /* Annotation */
+code span.at {
+    color: var(--syntax-3);
+} /* Attribute */
+code span.bn {
+    color: var(--syntax-3);
+} /* BaseN */
+code span.bu {
+    color: var(--syntax-3);
+} /* BuiltIn */
+code span.cf {
+    color: var(--syntax-3);
+    font-weight: bold;
+} /* ControlFlow */
+code span.ch {
+    color: var(--syntax-2);
+} /* Char */
+code span.cn {
+    color: var(--syntax-3);
+} /* Constant */
+code span.co {
+    color: var(--syntax-0);
+    font-style: italic;
+    opacity: 0.7;
+} /* Comment */
+code span.cv {
+    color: var(--syntax-2);
+    font-weight: bold;
+    font-style: italic;
+} /* CommentVar */
+code span.do {
+    color: var(--syntax-0);
+    font-style: italic;
+} /* Documentation */
+code span.dt {
+    color: var(--syntax-1);
+} /* DataType */
+code span.dv {
+    color: var(--syntax-3);
+} /* DecVal */
+code span.er {
+    color: var(--syntax-1);
+    font-weight: bold;
+} /* Error */
+code span.ex {
+} /* Extension */
+code span.fl {
+    color: var(--syntax-3);
+} /* Float */
+code span.fu {
+    color: var(--syntax-1);
+} /* Function */
+code span.im {
+    color: var(--syntax-3);
+    font-weight: bold;
+} /* Import */
+code span.in {
+    color: var(--syntax-3);
+    font-weight: bold;
+    font-style: italic;
+} /* Information */
+code span.kw {
+    color: var(--syntax-3);
+    font-weight: bold;
+} /* Keyword */
+code span.op {
+    color: var(--syntax-2);
+} /* Operator */
+code span.ot {
+    color: var(--syntax-0);
+} /* Other */
+code span.pp {
+    color: var(--syntax-1);
+} /* Preprocessor */
+code span.sc {
+    color: var(--syntax-2);
+} /* SpecialChar */
+code span.ss {
+    color: var(--syntax-2);
+} /* SpecialString */
+code span.st {
+    color: var(--syntax-2);
+} /* String */
+code span.va {
+    color: var(--syntax-1);
+} /* Variable */
+code span.vs {
+    color: var(--syntax-2);
+} /* VerbatimString */
+code span.wa {
+    color: var(--syntax-3);
+    font-weight: bold;
+    font-style: italic;
+}

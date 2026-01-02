@@ -1,0 +1,159 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+        <meta
+            name="author"
+            content="{{ page.author | default(value=config.author) }}"
+        />
+        {% if page.date %}
+        <meta name="dcterms.date" content="{{ page.date }}" />
+        {% endif %} {% if page.extra.keywords %}
+        <meta
+            name="keywords"
+            content="{{ page.extra.keywords | join(sep=', ') }}"
+        />
+        {% endif %} {% block title %} {% if page.title %}
+        <title>{{ page.title }} — {{ config.title }}</title>
+        {% else %}
+        <title>{{ config.title }}</title>
+        {% endif %} {% endblock %} {% block description %} {% if
+        page.description %}
+        <meta name="description" content="{{ page.description }}" />
+        {% elif page.summary %}
+        <meta name="description" content="{{ page.summary | striptags }}" />
+        {% else %}
+        <meta name="description" content="{{ config.description }}" />
+        {% endif %} {% endblock %}
+
+        <style>
+            @font-face {
+                font-family: "PT Sans";
+                src: url("/PTSans-Regular.ttf") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: "PT Sans";
+                src: url("/PTSans-Bold.ttf") format("truetype");
+                font-weight: bold;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: "PT Sans";
+                src: url("/PTSans-Italic.ttf") format("truetype");
+                font-weight: normal;
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: "PT Sans";
+                src: url("/PTSans-BoldItalic.ttf") format("truetype");
+                font-weight: bold;
+                font-style: italic;
+            }
+        </style>
+
+        <link rel="stylesheet" href="/style.css" />
+        <link
+            rel="alternate"
+            type="application/atom+xml"
+            title="Atom Feed for jan.systems"
+            href="/atom.xml"
+        />
+
+        <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+    </head>
+    <body>
+        <div class="header-row">
+            <a class="page-title" href="/">Jan Tuomi</a>
+            <div id="dark-mode-btn"></div>
+        </div>
+        <nav>
+            <a href="/posts">posts</a>
+            <span aria-hidden="true"> &#x2022; </span>
+            <a href="/linklog">linklog</a>
+            <span aria-hidden="true"> &#x2022; </span>
+            <a href="/now">now</a>
+            <span aria-hidden="true"> &#x2022; </span>
+            <a href="/projects">projects</a>
+        </nav>
+
+        <main>{% block content %}{% endblock %}</main>
+
+        <script>
+            const b = document.createElement("button");
+            b.innerHTML = "🌓";
+            b.setAttribute("id", "dark-mode-btn");
+            b.setAttribute("aria-label", "Toggle dark mode");
+            document.querySelector("#dark-mode-btn").replaceWith(b);
+
+            const initialManualColorScheme =
+                localStorage.getItem("colorScheme");
+            // If null, no manual color scheme is set
+            if (initialManualColorScheme === "dark") {
+                document.body.parentElement.classList.add("dark");
+            } else if (initialManualColorScheme === "light") {
+                document.body.parentElement.classList.add("light");
+            }
+
+            function getCurrentManualColorScheme() {
+                if (document.body.parentElement.classList.contains("dark"))
+                    return "dark";
+                if (document.body.parentElement.classList.contains("light"))
+                    return "light";
+                return null;
+            }
+
+            document
+                .querySelector("#dark-mode-btn")
+                .addEventListener("click", function () {
+                    const manualColorScheme = getCurrentManualColorScheme();
+                    const userPreferenceIsDark =
+                        window.matchMedia &&
+                        window.matchMedia("(prefers-color-scheme: dark)")
+                            .matches;
+
+                    const currentColorScheme =
+                        manualColorScheme ??
+                        (userPreferenceIsDark ? "dark" : "light");
+                    const newColorScheme =
+                        currentColorScheme === "dark" ? "light" : "dark";
+
+                    document.body.parentElement.classList.remove(
+                        "dark",
+                        "light",
+                    );
+                    document.body.parentElement.classList.add(newColorScheme);
+
+                    localStorage.setItem("colorScheme", newColorScheme);
+                });
+        </script>
+
+        <div style="display: none" class="h-card">
+            <a class="u-url" href="https://jan.systems">jan.systems</a>
+            <a class="u-url" href="https://github.com/jantuomi" rel="me"
+                >GitHub</a
+            >
+            <p class="p-note">
+                Minimalist, digital gardener, senior software engineer.
+            </p>
+            <img
+                class="u-photo"
+                src="https://jan.systems/files/Jan_Tuomi_headshot.jpg"
+                loading="lazy"
+            />
+            <p class="p-name">Jan Tuomi</p>
+            <p class="p-nickname">@jantuomi</p>
+            <p class="p-country-name">Finland</p>
+        </div>
+    </body>
+</html>

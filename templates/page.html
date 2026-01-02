@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>
+    {{ page.title }}<br />
+    <small>{{ page.date }}</small>
+    <small>[{{ page.extra.kind }}]</small>
+</h1>
+
+{% block lede %}
+<p>{{ page.description }}</p>
+{% endblock %}
+
+{% block toc %}
+<ul>
+    {% for h1 in page.toc %}
+    <li><a href="#{{ h1.id }}">{{ h1.title }}</a></li>
+    <ul>
+        {% for h2 in h1.children %}
+        <li><a href="#{{ h2.id }}">{{ h2.title }}</a></li>
+        <ul>
+            {% for h3 in h2.children %}
+            <li><a href="#{{ h3.id }}">{{ h3.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{{ page.content | safe }}
+
+<nav class="post-nav" aria-label="Post navigation">
+    {% if page.lower %}
+    <div class="post-nav-left"><a class="post-nav-link" href="{{ page.lower.permalink }}">← {{ page.lower.title }}</a></div>
+    {% endif %}
+    {% if page.higher %}
+    <div class="post-nav-right"><a class="post-nav-link" href="{{ page.higher.permalink }}">{{ page.higher.title }} →</a></div>
+    {% endif %}
+</nav>
+
+<div style="display: none" class="h-entry">
+    <div class="e-content p-name">{{ page.title }}</div>
+    <a rel="author" class="p-author h-card" href="https://jan.systems">
+        <img
+            class="u-photo"
+            src="https://jan.systems/files/Jan_Tuomi_headshot.jpg"
+            loading="lazy"
+        />
+        Jan Tuomi
+    </a>
+    <a class="u-url" href="https://jan.systems/{{ page.path }}">
+        Published <time class="dt-published">{{ page.date }}</time>
+    </a>
+</div>
+{% endblock %}
