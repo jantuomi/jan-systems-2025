@@ -180,6 +180,7 @@ pre {
 pre code {
     white-space: inherit;
     border: none;
+    padding: 0;
 }
 
 @media screen and (max-width: 600px) {
