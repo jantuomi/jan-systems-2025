@@ -13,7 +13,7 @@ Managing the estate of my late father has taken up a lot of time I would've othe
 
 Some decor and reno at home, some game programming, a lot of games. Game design has been on my mind a lot lately.
 
-I also attended my first ever Finnish defence forces reserves repetition exercise. I had a good time!
+I also attended my first ever Finnish defence forces reservist refresher training exercise. I had a good time!
 
 {{ toc() }}
 
