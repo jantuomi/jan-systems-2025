@@ -7,7 +7,7 @@ insert_anchor_links: none
 
 # My projects
 
-### [ATK16](atk16)
+### [ATK16](atk16/)
 
 A 16-bit computer and ecosystem project with a custom ISA and toolchain.
 
@@ -15,7 +15,7 @@ A 16-bit computer and ecosystem project with a custom ISA and toolchain.
 
 A dungeon synth / dark ambient duo project with Juuso.
 
-### [Cookbook](cookbook)
+### [Cookbook](cookbook/)
 
 An online cookbook of recipes I have prepared and enjoyed. Useful for me mostly.
 
@@ -23,10 +23,10 @@ An online cookbook of recipes I have prepared and enjoyed. Useful for me mostly.
 
 A CLI tool for communicating with a [Desmofylakas API](https://github.com/poksiala/desmo-api). A kind of a half-humorous attempt at creating something that is like a small Kubernetes but for BSD jails.
 
-### [Diddle](diddle)
+### [Diddle](diddle/)
 
 A minimalist, performant, accessibility-focused Doodle alternative. See [post](/posts/diddle-event-scheduler).
 
-### [Learning Japanese](learning-japanese)
+### [Learning Japanese](learning-japanese/)
 
 I have been self-studying Japanese on and off since I was 13.
