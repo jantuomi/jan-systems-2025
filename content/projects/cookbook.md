@@ -101,3 +101,11 @@ Put fish fillets into an oven tin/casserole. Add salt and oil on both sides, add
 ## Caramel tofu rice bowl
 
 Crumble and pat dry a bunch of tofu. Fry in light sesame oil. Add in chopped white parts of spring onion and chili. Optionally add other veggies like green beans. Add Jim Lim caramel sauce or similar. Serve with spring onion, chili and crushed salted peanuts.
+
+## Blue cheese oven pasta
+
+Roast in oven red onion, garlic, cauliflower, pecan nuts. Add sage leaves and blue cheese crumble, let melt. Serve with spaghetti.
+
+## Moose meatballs
+
+Prepare soy mince from dark soy crumble. Mix moose meat mince with salt, pepper, garlic powder, onion powder, soy mince, egg, dried mushroom powder. Form into balls. Fry in oven. Serve with mashed potatoes and roasted vegetables with lingonberry jam.
