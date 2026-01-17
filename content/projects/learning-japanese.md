@@ -1,6 +1,7 @@
 ---
 title: Learning Japanese
 weight: 0
+description: I have been self-studying Japanese on and off since I was 13.
 extra:
   kind: project
 ---

@@ -1,6 +1,7 @@
 ---
 title: Diddle, a minimalist event scheduler
 weight: 0
+description: Diddle is a minimalist scheduling tool that focuses on fast load times, accessibility and pragmatism.
 extra:
   kind: project
 ---

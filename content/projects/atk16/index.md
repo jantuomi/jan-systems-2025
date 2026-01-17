@@ -1,6 +1,7 @@
 ---
 title: ATK16
 weight: 0
+description: ATK16 is a homegrown faux-retro 16-bit computer and ecosystem project that includes a custom CPU, memory management, and a set of peripherals.
 extra:
   kind: project
 ---

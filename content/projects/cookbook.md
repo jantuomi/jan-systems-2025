@@ -1,6 +1,7 @@
 ---
 title: Cookbook
 weight: 0
+description: This space is an evolving, live reference for short everyday recipes that I have prepared and enjoyed. They are written in a shorthand way that makes sense to me, primarily.
 extra:
   kind: project
 ---
