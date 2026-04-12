@@ -109,3 +109,27 @@ Roast in oven red onion, garlic, cauliflower, pecan nuts. Add sage leaves and bl
 ## Moose meatballs
 
 Prepare soy mince from dark soy crumble. Mix moose meat mince with salt, pepper, garlic powder, onion powder, soy mince, egg, dried mushroom powder. Form into balls. Fry in oven. Serve with mashed potatoes and roasted vegetables with lingonberry jam.
+
+## Chicken curry soup
+
+Sauté a bunch of shallots, garlic. Add dried thai chili (~4). Add bitesize chicken. Add curry paste, chicken stock, coconut milk, garlic powder, ginger, tomato purée. Add water to thin, rice noodles. Garnish with spring onion.
+
+## Hot mango salsa wraps
+
+Make a salsa from fresh mangos, habaneros (1 per mango), cilantro, red onion, salt. Fry Gold & Green veg protein (or chicken) seasoned with spice mix ("grillimauste"). Serve in heated corn & wheat tortillas with mayo and guacamole.
+
+## Salsa verde wraps
+
+Fry Gold & Green veg protein, season with cumin, garlic powder, chili powder, paprika, MSG, salt. Serve in heated corn & wheat tortillas with a good salsa verde (Pirkka Parhaat), red cabbage, cheese, guac.
+
+## Arrabbiata with veg meatballs
+
+Barilla Arrabbiata + Apetit veg meatballs (kasvispullat). Serve with pasta. Parmiggiano on top.
+
+## Spinach feta pie
+
+Prepare ready made savoury pie dough, preheat in oven. Thaw frozen spinach, mix with two eggs, pack of feta, 2dl cream, cheese (e.g. mozz + emmental), salt, pepper, garlic powder. Oven for 35min at 200C. Let rest.
+
+## Adobo Chipotle chicken thighs
+
+Salt (and marinade), then fry chicken thighs in oil to get a good crust. Add soy sauce, chicken stock. Boil for some time. Remove chicken, add chipotle peppers in adobo sauce, and crushed tomatoes. Reduce. Make into paste with a blender, serve over rice with some fresh veggies.
