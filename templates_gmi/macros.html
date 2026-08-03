@@ -3,8 +3,8 @@
 {% macro linklog(page) %}
 {% set lh_data = load_data(path="linklog.json") %}
 <!-- END_GEMINI_CONTENT -->
-{% for lh_post in lh_data.posts %}
-=> {{ lh_post.href }} {{ lh_post.description }} ({{ lh_post.time | date(format='%Y-%m-%d') }})
+{% for lh_post in lh_data.posts -%}
+=> {{ lh_post.href }} {{ lh_post.time | date(format='%Y-%m-%d') }} {{ lh_post.description }}
 {% endfor %}
 <!-- START_GEMINI_CONTENT -->
 {% endmacro %}
@@ -12,7 +12,8 @@
 {% macro page_h1(page) %}
 # {{ page.title }}
 
-{% if page.date %}({{ page.date }}){% endif %}{% if page.extra.kind %} [{{ page.extra.kind }}]{% endif %}
+{% if page.date %}📅 {{ page.date }}{% endif %}
+{% if page.extra.kind %}🏷️ {{ page.extra.kind }}{% endif %}
 {% endmacro %}
 
 {% macro page_content(page) %}

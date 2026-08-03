@@ -6,6 +6,6 @@
 => /atom.xml Follow via Atom/RSS
 => https://aboutfeeds.com/ Huh?
 
-{% for page in posts.pages %}
-=> {{ page.path }} {{ page.title }} ({{ page.date | date(format="%Y-%m-%d") }})
+{% for page in posts.pages -%}
+=> {{ page.path }} {{ page.date | date(format="%Y-%m-%d") }} {{ page.title }}
 {% endfor %} {% endblock %}

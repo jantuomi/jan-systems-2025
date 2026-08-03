@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
 Hi! My name is Jan. I am a senior software engineer based in Finland. Welcome to my personal blog and digital garden¹.
 
 => /files/Jan_Tuomi_headshot.jpg My portrait
@@ -9,12 +8,10 @@ I like keeping things simple and pragmatic. I'm a life-long learner, but I don't
 I enjoy spending time with my fiancée and our dog, tinkering with computer hardware and software, games of all kinds but mostly video-, tabletop and role-playing, electronics, music, language learning and linguistics.
 I created this site² as a creative outlet for expressing myself and sharing my experiences.
 
-{% set posts = get_section(path="posts/_index.md") %}
-
 ## Latest posts
-
-{% for page in posts.pages | slice(end=3) %}
-=> {{ page.path }} {{ page.title }} ({{ page.date | date(format="%Y-%m-%d") }})
+{% set posts = get_section(path="posts/_index.md") %}
+{% for page in posts.pages | slice(end=3) -%}
+=> {{ page.path }} {{ page.date | date(format="%Y-%m-%d") }} {{ page.title }}
 {% endfor %}
 
 The posts page is a listing of my posts. I post sporadically about various subjects and with varying levels of effort.
@@ -38,6 +35,8 @@ Email (jan *at* jantuomi *dot* fi)
 => https://xn--sr8hvo.ws/next     IndieWeb Webring (→ next)
 => https://fediring.net/previous?host=jan.systems  Fediring (← previous)
 => https://fediring.net/next?host=jan.systems      Fediring (→ next)
+
+## Footnotes
 
 [1] The phrase "digital garden" is a metaphor for thinking about writing and creating that focuses less on the resulting "showpiece" and more on the process, care, and craft it takes to get there. — Joel Hooks
 

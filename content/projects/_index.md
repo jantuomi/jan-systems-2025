@@ -19,10 +19,6 @@ A dungeon synth / dark ambient duo project with Juuso.
 
 An online cookbook of recipes I have prepared and enjoyed. Useful for me mostly.
 
-### [🌐 desmoctl](https://github.com/jantuomi/desmoctl)
-
-A CLI tool for communicating with a [Desmofylakas API](https://github.com/poksiala/desmo-api). A kind of a half-humorous attempt at creating something that is like a small Kubernetes but for BSD jails.
-
 ### [Diddle](diddle/)
 
 A minimalist, performant, accessibility-focused Doodle alternative. See [post](/posts/diddle-event-scheduler).
