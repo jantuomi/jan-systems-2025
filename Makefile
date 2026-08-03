@@ -1,7 +1,13 @@
 .PHONY: all
-all: clean
-	@echo "Building project..."
+all: clean linklog build
+
+.PHONY: linklog
+linklog:
 	./update-linklog-json.sh
+
+.PHONY: build
+build: clean
+	@echo "Building project..."
 
 	# Build html
 	ln -s templates_html templates
@@ -20,7 +26,6 @@ all: clean
 .PHONY: dev
 dev:
 	@echo "Starting development server..."
-	./update-linklog-json.sh
 	ln -s templates_html templates
 	zola serve --drafts
 

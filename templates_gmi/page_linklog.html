@@ -2,6 +2,6 @@
 {% import "macros.html" as macros %}
 {% block content %}
 <!-- START_GEMINI_CONTENT -->
-{{ page.content | replace(from="<!-- linklog -->", to=macros::linklog(page=page)) }}
+{{ page.content | replace(from="<!-- linklog -->", to=macros::linklog(page=page)) | safe }}
 <!-- END_GEMINI_CONTENT -->
 {% endblock %}
