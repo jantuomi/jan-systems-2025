@@ -1,6 +1,8 @@
-public/
+public*
 linklog.json
 .envrc
 static/giallo.css
 .obsidian/
 .stfolder/
+.DS_Store
+.certificates/

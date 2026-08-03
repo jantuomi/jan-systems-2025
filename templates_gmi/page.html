@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+{% block content %}
+{{ macros::page_content(page=page) }}
+
+{% if page.higher %}
+=> {{ page.higher.path }} ← {{ page.higher.title }}
+{% endif %}{% if page.lower %}
+=> {{ page.lower.path }} {{ page.lower.title }} →
+{% endif %}
+{% endblock content %}

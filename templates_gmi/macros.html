@@ -1,0 +1,21 @@
+{% macro toc(page) %}{% endmacro %}
+
+{% macro linklog(page) %}
+{% set lh_data = load_data(path="linklog.json") %}
+{% for lh_post in lh_data.posts %}
+=> {{ lh_post.href }} {{ lh_post.description }} ({{ lh_post.time | date(format='%Y-%m-%d') }})
+{% endfor %}
+{% endmacro %}
+
+{% macro page_h1(page) %}
+# {{ page.title }}
+
+{% if page.date %}({{ page.date }}){% endif %}{% if page.extra.kind %} [{{ page.extra.kind }}]{% endif %}
+{% endmacro %}
+
+{% macro page_content(page) %}
+{{ self::page_h1(page=page) }}
+<!-- START_GEMINI_CONTENT -->
+{{ page.content | replace(from="<!-- toc -->", to=macros::toc(page=page)) | safe }}
+<!-- END_GEMINI_CONTENT -->
+{% endmacro %}

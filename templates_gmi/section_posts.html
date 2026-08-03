@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+{% set posts = get_section(path="posts/_index.md") %}
+## {{ section.title }}
+
+=> /atom.xml Follow via Atom/RSS
+=> https://aboutfeeds.com/ Huh?
+
+{% for page in posts.pages %}
+=> {{ page.path }} {{ page.title }} ({{ page.date | date(format="%Y-%m-%d") }})
+{% endfor %} {% endblock %}
