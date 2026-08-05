@@ -7,7 +7,7 @@ insert_anchor_links: none
 
 # My projects
 
-### [ATK16](atk16/)
+### [ATK16](/projects/atk16)
 
 A 16-bit computer and ecosystem project with a custom ISA and toolchain.
 
@@ -15,14 +15,14 @@ A 16-bit computer and ecosystem project with a custom ISA and toolchain.
 
 A dungeon synth / dark ambient duo project with Juuso.
 
-### [Cookbook](cookbook/)
+### [Cookbook](/projects/cookbook)
 
 An online cookbook of recipes I have prepared and enjoyed. Useful for me mostly.
 
-### [Diddle](diddle/)
+### [Diddle](/projects/diddle)
 
 A minimalist, performant, accessibility-focused Doodle alternative. See [post](/posts/diddle-event-scheduler).
 
-### [Learning Japanese](learning-japanese/)
+### [Learning Japanese](/projects/learning-japanese)
 
 I have been self-studying Japanese on and off since I was 13.
