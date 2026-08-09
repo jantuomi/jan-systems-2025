@@ -1,4 +1,9 @@
+{% if src is starting_with("/") %}
+{% set img_src = src %}
+{% else %}
+{% set img_src = page.path ~ src %}
+{% endif %}
 <figure>
-    <img src="{{ src }}" alt="{{ alt }}" />
+    <img src="{{ img_src }}" alt="{{ alt }}" />
     <figcaption aria-hidden="true">{{ alt }}</figcaption>
 </figure>

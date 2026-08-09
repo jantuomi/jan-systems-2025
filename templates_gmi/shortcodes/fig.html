@@ -1,1 +1,6 @@
-=> {{ src }} {{ alt }}
+{% if src is starting_with("/") %}
+{% set img_src = src %}
+{% else %}
+{% set img_src = page.path ~ src %}
+{% endif %}
+=> {{ img_src }} {{ alt }}

@@ -2,7 +2,8 @@
 title: 🌱 Now, spring 2026
 date: 2026-04-12
 description: Planning the wedding, reworking my wardrobe. Home reno. Dog escaped.
-kind: now
+extra:
+  kind: now
 ---
 
 Planning the wedding, reworking my wardrobe. Home reno.

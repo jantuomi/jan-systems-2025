@@ -2,7 +2,8 @@
 title: ☀️ Now, summer 2026
 date: 2026-06-01
 description: TODO
-kind: now
+extra:
+  kind: now
 draft: true
 ---
 

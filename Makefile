@@ -25,9 +25,10 @@ build: clean
 
 .PHONY: dev
 dev:
-	@echo "Starting development server..."
+	unlink templates || true
 	ln -s templates_html templates
-	zola serve --drafts
+	@echo "Starting development server..."
+	trap 'unlink templates || true' EXIT; zola serve --drafts
 
 .PHONY: deploy
 deploy:
