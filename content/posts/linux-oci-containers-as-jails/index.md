@@ -1,5 +1,7 @@
 ---
 title: Linux OCI containers as plain FreeBSD jails (without Podman)
+description: |
+  Linux software distributed as OCI container images can be extracted into a FreeBSD jail with Linux compatibility enabled. With a couple of mounts set up to make the extracted root a valid Linux userland, the "container" can run like a regular jail without involving virtual machines or a separate control interface (`podman`). Isolation is handled by the jail subsystem.
 date: 2026-08-10
 extra:
   kind: post
