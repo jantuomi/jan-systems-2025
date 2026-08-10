@@ -289,6 +289,7 @@ You might want to implement these in some way. My own approach can be seen in th
 ```sh
 # Set up environment variables in this file
 [immich-server]$ touch /usr/local/etc/immich_server.env
+[immich-server]$ chmod 600 /usr/local/etc/immich_server.env
 ```
 
 Enable the service to start automatically on jail startup, and start it once right away:
