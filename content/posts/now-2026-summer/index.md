@@ -9,9 +9,22 @@ draft: true
 
 {{ toc() }}
 
+## Wedding
+
+TODO
+
 ## Games
 
+**Finished**
+
 - The Messenger
+- Mina the Hollower
+- Split Fiction
+
+**Started**
+
+- Ball x Pit
+- Denshattack!
 
 ## New laptop
 

@@ -165,7 +165,7 @@ a:focus {
 }
 
 code {
-    padding: 3px 5px;
+    padding: 2px 5px;
     border: 1px solid var(--blockquote-color);
     white-space: nowrap;
 }
