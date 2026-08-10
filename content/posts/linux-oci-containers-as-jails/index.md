@@ -1,12 +1,13 @@
 ---
 title: Linux OCI containers as plain FreeBSD jails (without Podman)
-date: 2026-07-28
+date: 2026-08-10
 extra:
   kind: post
-draft: true
 ---
 
 > **Abstract**: Linux software distributed as OCI container images can be extracted into a FreeBSD jail with Linux compatibility enabled. With a couple of mounts set up to make the extracted root a valid Linux userland, the "container" can run like a regular jail without involving virtual machines or a separate control interface (`podman`). Isolation is handled by the jail subsystem.
+
+{{ toc() }}
 
 FreeBSD has a respectable library of ported software in the [ports tree](https://www.freshports.org). Getting ported software set up is usually just a `pkg install` away. Sometimes you have to take a couple of extra steps and run a `make install`. Some programs do not have a port but can be made to run anyway, by tweaking a Makefile, setting up an ad-hoc Python environment, or something to that effect.
 
@@ -62,20 +63,24 @@ I didn't set up podman to run Immich. Instead, I started designing a custom appr
 
 The core idea of my solution is to note a central fact: a container image is basically an archived Linux userland. What if I follow the FreeBSD Handbook's instructions on [how to run a Linux jail](https://docs.freebsd.org/en/books/handbook/jails/#creating-linux-jail) and adjust the steps to run in the container root filesystem instead?
 
-First things first: I enabled Linux compatibility on the host.
+Through some trial and error, I got a setup working. I'll walk you through the main steps in a tutorial fashion, using the `immich-server` container as an example.
+
+### Preparing the host and starting an interim jail
+
+First things first: Enable Linux compatibility on the host.
 
 ```sh
 [host]$ sysrc linux_enable="YES"
 [host]$ service linux start
 ```
 
-I used `zfs clone` to clone my `15.1-RELEASE` template (which is based on the same release as my host) into a new jail root. I chose the name `immich-server` because it matches the name of the container I'm planning to run in it.
+Next, set up a jail filesystem. I used `zfs clone` to clone my `15.1-RELEASE` template (which is based on the same release as my host) into a new jail root. Call it `immich-server` because it matches the name of the container I'm planning to run in it. My jail filesystems live under `zroot/jails/containers/`:
 
 ```sh
 [host]$ zfs clone zroot/jails/templates/15.1-RELEASE@base zroot/jails/containers/immich-server
 ```
 
-I used a direct `jail` command to set up basic networking and select the filesystem path:
+Use a direct `jail` command to set up basic networking and select the filesystem path. This isn't the final configuration: you just need it running to set up the immich container.
 
 ```sh
 # see that the IP and interface match your setup
@@ -94,26 +99,28 @@ I used a direct `jail` command to set up basic networking and select the filesys
 [immich-server]$ 
 ```
 
-I now have a shell in the jail.
+You now have a shell in the jail.
 
-Next, I needed to 1) download the container, and 2) extract the filesystem into a jail. Luckily, the OCI ecosystem has suitable programs for these tasks: the [umoci](https://github.com/opencontainers/umoci) and [skopeo](https://github.com/podman-container-tools/skopeo) command line tools.
+### Extract the OCI image
 
-These tools are only needed during "build time", i.e. while constructing our container jail. They are not needed during runtime. You might choose to install them in the jail, and perhaps uninstall them later. Or maybe install them on the host and operate on the jail filesystem from the host side, keeping the jail "clean". Maybe one could even set up a temporary "build jail"? I went with the first option, and just installed the tools in the target jail, `immich-server`.
+Next, you need to 1) download the image, and 2) extract the image filesystem into a jail. Luckily, the OCI ecosystem has suitable programs for these tasks: the [umoci](https://github.com/opencontainers/umoci) and [skopeo](https://github.com/podman-container-tools/skopeo) command line tools.
 
-With skopeo, we can download a Linux OCI image into a file in the filesystem:
+These tools are only needed during _build time_, i.e. while constructing the container jail. They are not needed during runtime. You might choose to install them in the jail, and perhaps uninstall them later. Or maybe install them on the host and operate on the jail filesystem from the host side, keeping the jail _clean_. Maybe one could even set up a temporary "build jail"? I went with the first option, and just installed the tools in the target jail, `immich-server`.
+
+With `skopeo`, you can download a Linux OCI image into a file in the filesystem:
 
 ```sh
 [immich-server]$ pkg install skopeo
-
 [immich-server]$ TAG="immich-server:v3.0.3"
 [immich-server]$ skopeo copy --override-os linux docker://ghcr.io/immich-app/$TAG oci:$TAG
 ```
 
 This creates a directory called `immich-server` in the current directory. The directory contains the manifest and the layers.
 
-Then, we use _umoci_ to extract the layers into a valid Linux userland. Just one problem: umoci does not have a FreeBSD port or a FreeBSD binary build. Fear not! The Linux binary is statically linked and our jail has Linux compatibility.
+Then, use `umoci` to extract the layers into a valid Linux userland. Just one problem: `umoci` does not have a FreeBSD port or a FreeBSD binary build. Fear not! The Linux binary is statically linked and the jail has Linux compatibility, since you enabled it on the host.
 
 ```sh
+# Assuming amd64 arch here
 [immich-server]$ fetch https://github.com/opencontainers/umoci/releases/latest/download/umoci.linux.amd64
 [immich-server]$ install -m 755 umoci.linux.amd64 /usr/local/bin/umoci
 [immich-server]$ mkdir /linux
@@ -128,13 +135,15 @@ Let's move `unpacked/rootfs` to an easy absolute path: `/linux`.
 [immich-server]$ mv unpacked/rootfs /linux
 ```
 
-We can chroot inside an see that it acts like a Linux system should:
+Chroot inside and see that it acts like a Linux system should:
 
 ```sh
 [immich-server]$ chroot /linux /bin/sh
 $ uname -s
 Linux
 ```
+
+### Mounting special device nodes and defining the final jail
 
 Some containerized apps might work already, but most need specific device nodes to function. Let's exit the chroot and shell, and stop the jail.
 
@@ -143,7 +152,11 @@ Some containerized apps might work already, but most need specific device nodes 
 immich-server: removed
 ```
 
-Now, define the jail properly with a `jail.conf`, taking inspiration from the Handbook. I'm trying to set up a normal Linux userland with the expected dev nodes as well as special filesystems like `/proc` and `/sys`.
+Now, define the jail properly with a `jail.conf`, taking inspiration from the Handbook. You can also use `bastille`, `iocage` or any other jail manager/wrapper to do this. The goal here is to set up a normal Linux userland with the expected dev nodes as well as special filesystems like `/proc` and `/sys`.
+
+Mount also any directories that are used during runtime, i.e. those that are handled by volume or bind mounts when using OCI containers.
+
+Edit as needed:
 
 ```
 immich-server {
@@ -156,7 +169,7 @@ immich-server {
   allow.raw_sockets;
   exec.clean;
   mount.devfs;
-  devfs_ruleset = 4;  # ensure that the devfs ruleset exposes relevant devices
+  devfs_ruleset = 4;  # Ensure that you use a devfs ruleset that exposes all basic devices
   allow.mount;
   allow.mount.devfs;
   allow.mount.fdescfs;
@@ -195,14 +208,16 @@ If you put the `jail.conf` in its proper place, you can now control the jail wit
 Starting jails: immich-server.
 ```
 
+### Creating the `rc` service
+
 Now, we need to configure the containerized app to start when the jail starts. We can use a simple `rc` service for this! Let's `jexec` into the jail and create a service file.
 
 ```sh
-[host]$ jexec immich-server
+[host]$ jexec immich-server /bin/sh
 [immich-server]$ vi /usr/local/etc/rc.d/immich_server
 ```
 
-My service looks like this. The idea is to run the application in a `chroot`. Exported environment variables are passed onto the chrooted process, so we create a file called `immich_server.env` to house these variables, and export them. The startup command is improvised based on the container image `config.json` in the extracted `unpacked` directory.
+My service looks like this. The idea is to run the application in a `chroot`. The startup command is improvised based on the container image `config.json` in the extracted `unpacked` directory.
 
 ```
 #!/bin/sh
@@ -263,9 +278,41 @@ immich_server_status() {
 run_rc_command "$1"
 ```
 
+Now, some things don't map to this filesystem-focused way of running container apps. Containerfiles can define:
+
+- environment variables
+- exposed ports
+- user and group ids
+
+You might want to implement these in some way. My own approach can be seen in the `rc` service example: you can supply an envfile with `FOO=bar` style variables and specify user and group with `rc.conf` variables.
+
+```sh
+# Set up environment variables in this file
+[immich-server]$ touch /usr/local/etc/immich_server.env
+```
+
 Enable the service to start automatically on jail startup, and start it once right away:
 
 ```sh
 [immich-server]$ service immich_server enable
 [immich-server]$ service immich_server start
 ```
+
+### Upgrading the container
+
+I have yet to upgrade to a more recent version of the image, but I'd imagine it is as simple as:
+
+1. stopping the service,
+2. unmounting all mountpoints,
+3. removing the `/linux` directory, and
+3. redoing the steps that download and extract an image into `/linux`, using the new image TAG
+
+Then, a jail restart should bring everything up again.
+
+## Thoughts
+
+I have had a good experience with this setup. It is somewhat _manual_, sure, and I guess some utility scripts could be used for the download and extract part at least, but that doesn't bother me really. Obviously adhoc setups like this could be improved and made more robust/rigorous.
+
+You can also run multiple container images in a single jail with this method. Immich has a separate machine learning container for running face recognition tasks etc. I run that in the same jail with a separate `rc` service.
+
+One fun approach could be to wrap this into a FreeBSD port, and build the image fs with poudriere. A simple `pkg install` could then set up the service and everything. Something to consider!
