@@ -239,7 +239,7 @@ logfile="/var/log/${name}.log"
 load_rc_config $name
 : ${immich_server_enable:="NO"}
 : ${immich_server_envfile:="/usr/local/etc/immich_server.env"}
-: ${immich_server_root:="/image/immich-server"}
+: ${immich_server_root:="/linux"}
 : ${immich_server_user:="root"}
 : ${immich_server_group:="wheel"}
 
