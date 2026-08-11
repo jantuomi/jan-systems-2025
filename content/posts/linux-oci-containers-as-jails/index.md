@@ -69,10 +69,11 @@ Through some trial and error, I got a setup working. I'll walk you through the m
 
 ### Preparing the host and starting an interim jail
 
-First things first: Enable Linux compatibility on the host.
+First things first: Enable Linux compatibility on the host. You don't want to mount any special filesystems on the host, so disable those separately:
 
 ```sh
-[host]$ sysrc linux_enable="YES"
+[host]$ sysrc linux_enable=YES
+[host]$ sysrc linux_mounts_enable=NO
 [host]$ service linux start
 ```
 
