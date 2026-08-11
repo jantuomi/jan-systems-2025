@@ -77,7 +77,7 @@ First things first: Enable Linux compatibility on the host. You don't want to mo
 [host]$ service linux start
 ```
 
-Next, set up a jail filesystem. I used `zfs clone` to clone my `15.1-RELEASE` template (which is based on the same release as my host) into a new jail root. Call it `immich-server` because it matches the name of the container I'm planning to run in it. My jail filesystems live under `zroot/jails/containers/`:
+Next, set up a jail filesystem. I used `zfs clone` to clone my `15.1-RELEASE` template (which is based on the same release as my host) into a new jail root. Call it `immich-server` because it matches the name of the container. My jail filesystems live under `zroot/jails/containers/`:
 
 ```sh
 [host]$ zfs clone zroot/jails/templates/15.1-RELEASE@base zroot/jails/containers/immich-server
