@@ -188,6 +188,10 @@ pre code {
     div.sourceCode {
         margin: 20px -15px;
     }
+
+    blockquote {
+        margin: 20px -15px !important;
+    }
 }
 
 .sourceCode {
