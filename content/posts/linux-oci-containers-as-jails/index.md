@@ -126,7 +126,6 @@ Then, use `umoci` to extract the layers into a valid Linux userland. Just one pr
 # Assuming amd64 arch here
 [immich-server]$ fetch https://github.com/opencontainers/umoci/releases/latest/download/umoci.linux.amd64
 [immich-server]$ install -m 755 umoci.linux.amd64 /usr/local/bin/umoci
-[immich-server]$ mkdir /linux
 [immich-server]$ umoci unpack --image $TAG unpacked
 ```
 
@@ -159,6 +158,8 @@ Now, define the jail properly with a `jail.conf`, taking inspiration from the Ha
 
 Mount also any directories that are used during runtime, i.e. those that are handled by volume or bind mounts when using OCI containers.
 
+Note that the jail does not need any of the `allow.mount.*` directives, since the mount syscalls happen on the host side.
+
 Edit as needed:
 
 ```
@@ -173,14 +174,7 @@ immich-server {
   exec.clean;
   mount.devfs;
   devfs_ruleset = 4;  # Ensure that you use a devfs ruleset that exposes all basic devices
-  allow.mount;
-  allow.mount.devfs;
-  allow.mount.fdescfs;
-  allow.mount.procfs;
-  allow.mount.linprocfs;
-  allow.mount.linsysfs;
-  allow.mount.tmpfs;
-  enforce_statfs = 1;
+  enforce_statfs = 1; # Allow the jail to see what's mounted
 
   # HOSTNAME/PATH
   host.hostname = "${name}";
