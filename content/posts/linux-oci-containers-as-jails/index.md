@@ -156,9 +156,9 @@ immich-server: removed
 
 Now, define the jail properly with a `jail.conf`, taking inspiration from the Handbook. You can also use `bastille`, `iocage` or any other jail manager/wrapper to do this. The goal here is to set up a normal Linux userland with the expected dev nodes as well as special filesystems like `/proc` and `/sys`.
 
-Mount also any directories that are used during runtime, i.e. those that are handled by volume or bind mounts when using OCI containers.
+Mount also any directories that are used during runtime, i.e. those that are handled by volume or bind mounts when using OCI containers. Note that the jail does not need any of the `allow.mount.*` directives, since the mount syscalls happen on the host side.
 
-Note that the jail does not need any of the `allow.mount.*` directives, since the mount syscalls happen on the host side.
+Remember to set the devfs ruleset to a suitable value in the `devfs_ruleset` directive, which affects the `/dev` mount, as well as the fstab-style `/linux/dev` mount.
 
 Edit as needed:
 
@@ -173,7 +173,7 @@ immich-server {
   allow.raw_sockets;
   exec.clean;
   mount.devfs;
-  devfs_ruleset = 4;  # Ensure that you use a devfs ruleset that exposes all basic devices
+  devfs_ruleset  = 4; # Ensure that you use a devfs ruleset that exposes all basic devices
   enforce_statfs = 1; # Allow the jail to see what's mounted
 
   # HOSTNAME/PATH
@@ -185,7 +185,7 @@ immich-server {
   interface = lan0;
 
   # LINUX SPECIAL MOUNTS
-  mount += "devfs       $path/linux/dev     devfs     rw  0 0";
+  mount += "devfs       $path/linux/dev     devfs     rw,ruleset=4  0 0";
   mount += "tmpfs       $path/linux/dev/shm tmpfs     rw,size=1g,mode=1777  0 0";
   mount += "fdescfs     $path/linux/dev/fd  fdescfs   rw,linrdlnk 0 0";
   mount += "linprocfs   $path/linux/proc    linprocfs rw  0 0";
