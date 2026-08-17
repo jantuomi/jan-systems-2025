@@ -1,12 +1,12 @@
 # The URL the site will be built for
 base_url = "https://jan.systems"
 
-title = "Jan Tuomi"
+title = "Jan Sydänviita (né Tuomi)"
 description = "Minimalist, digital gardener, senior software engineer."
 default_language = "en"
 generate_feeds = true
 feed_filenames = ["atom.xml"]
-author = "Jan Tuomi"
+author = "Jan Sydänviita (né Tuomi)"
 generate_sitemap = true
 generate_robots_txt = true
 compile_sass = false
