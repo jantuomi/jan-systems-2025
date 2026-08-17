@@ -14,6 +14,9 @@ build: clean
 	zola build -o public_html
 	unlink templates || true
 
+	# Copy extra HTML pages
+	(cd extra_pages_html && cp -a . ../public_html/)
+
 	# Build gemini
 	ln -s templates_gmi templates
 	zola build -o public_gmi
