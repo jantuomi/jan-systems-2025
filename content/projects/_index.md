@@ -7,11 +7,15 @@ insert_anchor_links: none
 
 # My projects
 
+### [My personal Git Forge](https://forge.jan.systems)
+
+I host all my version controlled projects in the "forge".
+
 ### [ATK16](/projects/atk16)
 
 A 16-bit computer and ecosystem project with a custom ISA and toolchain.
 
-### [🌐 BLEK](https://blekmusik.bandcamp.com/album/m-rkret-efter-soluppg-ngen)
+### [BLEK (Bandcamp)](https://blekmusik.bandcamp.com/album/m-rkret-efter-soluppg-ngen)
 
 A dungeon synth / dark ambient duo project with Juuso.
 
