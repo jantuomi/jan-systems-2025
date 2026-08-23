@@ -1,6 +1,7 @@
 ---
 title: My pile of incomplete projects
 date: 2025-04-28
+description: The number of started projects and/or empty checkboxes in my to do list is getting out of hand.
 extra:
   kind: note
 ---

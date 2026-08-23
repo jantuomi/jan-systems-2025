@@ -1,6 +1,7 @@
 ---
 title: jan.systems tech stack retro/prospective
 date: 2025-04-28
+description: I have a website authoring system that involves Obsidian sync and a hand-crafted static site generator (SSG) written in Scheme.
 extra:
   kind: note
 ---

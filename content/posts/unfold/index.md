@@ -1,6 +1,7 @@
 ---
 title: Automatic slideshows with reveal-unfold.js
 date: 2024-04-21
+description: I recently presented a lightning talk about the IndieWeb and personal websites to my colleagues at the office.
 extra:
   kind: project
   slideshow: defined

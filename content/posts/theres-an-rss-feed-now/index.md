@@ -1,6 +1,7 @@
 ---
 title: There's an RSS feed now
 date: 2024-02-15
+description: As part of the site build process, I use pandoc-rss to automatically build an RSS feed of my posts.
 extra:
   kind: note
 ---

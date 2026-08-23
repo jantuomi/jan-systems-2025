@@ -1,6 +1,7 @@
 ---
 title: "EuroBSDCon 2025: conference notes"
 date: 2025-10-17
+description: EuroBSDCon is one of the events organized under the BSD community umbrella, focusing on all things related to and descending from 4.4 Berkeley Software Distribution.
 extra:
   kind: note
 ---

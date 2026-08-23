@@ -1,6 +1,7 @@
 ---
 title: Diddle, a minimalist event scheduler
 date: 2024-03-12
+description: I don't like Doodle.
 extra:
   kind: project
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Subjective review: Miru"
 date: 2024-07-14
+description: It's my favorite solo game, but it has some pacing problems. 8/10.
 extra:
   kind: note
 ---

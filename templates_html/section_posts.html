@@ -14,6 +14,7 @@
     <li class="archive-entry">
         <a href="{{ page.path }}">{{ page.title }}</a>
         <small>({{ page.date | date(format="%Y-%m-%d") }})</small>
+        <p>{{ page.description }}</p>
     </li>
     {% endfor %} {% endblock %}
 </ul>

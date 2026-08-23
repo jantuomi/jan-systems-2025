@@ -1,6 +1,7 @@
 ---
 title: Opening multiple DB tunnels with AWS SSM
 date: 2024-06-26
+description: To open a tunneled connection to an AWS managed database, such as RDS or DocumentDB, the commonly recommended way is to use a bastion host and `aws ssm start-session`.
 extra:
   kind: note
 ---

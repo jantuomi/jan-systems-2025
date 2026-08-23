@@ -1,6 +1,7 @@
 ---
 title: Managing dotfiles in `git`
 date: 2024-07-08
+description: Dealing with dotfiles can be a nuisance.
 extra:
   kind: note
 ---

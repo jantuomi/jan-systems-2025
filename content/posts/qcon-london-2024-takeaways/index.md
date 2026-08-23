@@ -1,6 +1,7 @@
 ---
 title: QCon London 2024 takeaways
 date: 2024-04-20
+description: QCon London 2024 was a multidisciplinary software engineering conference in the London QEII Centre in April 2024.
 extra:
   kind: post
 ---

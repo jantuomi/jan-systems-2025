@@ -1,7 +1,7 @@
 ---
 title: ❄️ Now, winter 2023
 date: 2023-01-30
-description: Working on this site. Doing small renovations and fixes to the house. Learning Chicken Scheme. Reading Category Theory for Programmers by Bartosz Milewski.
+description: Working on this site. Learning Chicken Scheme. Reading Category Theory for Programmers.
 extra:
   kind: now
 ---

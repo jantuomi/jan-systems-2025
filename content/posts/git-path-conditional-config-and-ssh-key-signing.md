@@ -1,6 +1,7 @@
 ---
 title: Path-conditional config and SSH key signing in `git`
 date: 2024-12-21
+description: Today I learned about two recent-ish Git features.
 extra:
   kind: note
 ---

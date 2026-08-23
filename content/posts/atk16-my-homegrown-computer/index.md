@@ -1,6 +1,7 @@
 ---
 title: ATK16 – My homegrown computer
 date: 2024-05-01
+description: ATK16 is a learning project I've been working on for some time.
 extra:
   kind: project
 ---

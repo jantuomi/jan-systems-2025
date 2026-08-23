@@ -1,6 +1,7 @@
 ---
 title: Directory aware `git`
 date: 2024-05-07
+description: I have separate SSH keys and email addresses for personal projects and work projects.
 extra:
   kind: note
 ---

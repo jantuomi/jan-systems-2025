@@ -1,6 +1,9 @@
 ---
 title: It doesn't mean that
 date: 2024-05-16
+description: When I learned my first programming language, I learned about functions.
+extra:
+  kind: note
 ---
 
 <img src="wikimedia_monad.svg" alt="A plain circle with a small dot in the center" style="max-height: 200px; margin-bottom: 0px" />

@@ -1,6 +1,7 @@
 ---
 title: Cassettes
 date: 2024-03-27
+description: I like the idea of cassettes. They are cheap and analog, and there's a culture of sharing and trading them.
 extra:
   kind: note
 ---

@@ -1,6 +1,7 @@
 ---
 title: Deploying the garden
 date: 2024-03-26
+description: Every respectable tech blog must contain two posts.
 extra:
   kind: note
 ---

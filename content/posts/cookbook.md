@@ -1,6 +1,7 @@
 ---
 title: Cookbook
 date: 2024-03-28
+description: I have started a terse cookbook project for myself.
 extra:
   kind: project
 ---

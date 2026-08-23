@@ -1,6 +1,8 @@
 ---
 title: "MacOS: Opening Git commit prompt in active GUI editor"
 date: 2025-01-29
+description: |
+  This is a quick, neat thing I happened to find on accident. As a result of the application bundle system that MacOS uses ubiquitously, you can figure out the currently open application with the __CFBundleIdentifier environment variable.
 extra:
   kind: note
 ---

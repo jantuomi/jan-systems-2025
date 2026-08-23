@@ -1,6 +1,7 @@
 ---
 title: 🌞 Now, summer 2024
 date: 2024-07-18
+description: Yard work, a new wine hobby, and passing the AWS Developer Associate exam.
 extra:
   kind: now
 ---
