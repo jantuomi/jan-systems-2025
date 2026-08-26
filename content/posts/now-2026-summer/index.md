@@ -100,7 +100,7 @@ Me and Juuso (aka [Blek](https://blekmusik.bandcamp.com/album/m-rkret-efter-solu
 
 I've been digging this doom metal outfit called Faetooth lately.
 
-<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2239340294/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://faetooth.bandcamp.com/album/labyrinthine">Labyrinthine by Faetooth</a></iframe>
+{{ bandcamp_embed(album_id="2239340294", album_url="https://faetooth.bandcamp.com/album/labyrinthine", text="Labyrinthine by Faetooth") }}
 
 ## Anime & movies
 
