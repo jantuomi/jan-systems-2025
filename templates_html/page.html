@@ -4,6 +4,27 @@
 
 {{ macros::page_content(page=page) }}
 
+<div id="webmentions"></div>
+<script>
+fetch(`https://webmention.io/api/mentions.jf2?target={{ page.permalink | safe }}`)
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('webmentions');
+    (data.children || []).forEach(entry => {
+      const author = entry.author || {};
+      const el = document.createElement('div');
+      el.className = 'webmention webmention-' + (entry['wm-property'] || 'mention');
+      el.innerHTML = `
+        ${author.photo ? `<img src="${author.photo}" alt="" width="32" height="32">` : ''}
+        <a href="${author.url || entry.url}">${author.name || 'Someone'}</a>
+        ${entry.content ? `<p>${entry.content.text || ''}</p>` : ''}
+      `;
+      container.appendChild(el);
+    });
+  })
+  .catch(err => console.error('Webmentions failed to load:', err));
+</script>
+
 <nav class="post-nav" aria-label="Post navigation">
     {% if page.higher %}
     <div class="post-nav-left">
@@ -21,17 +42,19 @@
 </nav>
 
 <div style="display: none" class="h-entry">
-    <div class="e-content p-name">{{ page.title }}</div>
-    <a rel="author" class="p-author h-card" href="https://jan.systems">
+    <div class="p-name">{{ page.title }}</div>
+    <span class="p-author h-card">
         <img
             class="u-photo"
             src="https://jan.systems/files/Jan_Tuomi_headshot.jpg"
             loading="lazy"
         />
-        Jan Tuomi (né Tuomi)
-    </a>
-    <a class="u-url" href="https://jan.systems/{{ page.path }}">
+        <a class="p-name u-url" href="https://jan.systems">Jan Sydänviita (né Tuomi)</a>
+    </span>
+    <a class="u-url" href="{{ page.permalink }}">
         Published <time class="dt-published">{{ page.date }}</time>
     </a>
+    <p class="e-content">Testing, don't mind me</p>
+    <a class="u-in-reply-to" href="https://aaronparecki.com/2018/06/30/11/your-first-webmention">@aaronpk</a>
 </div>
 {% endblock %}
