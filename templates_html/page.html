@@ -2,7 +2,19 @@
 {% import "macros.html" as macros %}
 {% block content %}
 
+<article class="h-entry">
 {{ macros::page_content(page=page) }}
+<span class="p-author h-card">
+    <img class="u-photo" src="https://jan.systems/files/Jan_Tuomi_headshot.jpg" loading="lazy" style="display:none" />
+    <a class="p-name u-url" href="https://jan.systems" style="display:none">Jan Sydänviita (né Tuomi)</a>
+</span>
+<a class="u-url" href="{{ page.permalink }}" hidden></a>
+<time class="dt-published" datetime="{{ page.date }}" hidden></time>
+{% if page.extra.wm_in_reply_to %}
+<a class="u-in-reply-to" href="{{ page.extra.wm_in_reply_to }}" hidden></a>
+{% endif %}
+
+</article>
 
 <div id="webmentions"></div>
 <script>
@@ -40,21 +52,4 @@ fetch(`https://webmention.io/api/mentions.jf2?target={{ page.permalink | safe }}
     </div>
     {% endif %}
 </nav>
-
-<div style="display: none" class="h-entry">
-    <div class="p-name">{{ page.title }}</div>
-    <span class="p-author h-card">
-        <img
-            class="u-photo"
-            src="https://jan.systems/files/Jan_Tuomi_headshot.jpg"
-            loading="lazy"
-        />
-        <a class="p-name u-url" href="https://jan.systems">Jan Sydänviita (né Tuomi)</a>
-    </span>
-    <a class="u-url" href="{{ page.permalink }}">
-        Published <time class="dt-published">{{ page.date }}</time>
-    </a>
-    <p class="e-content">Testing, don't mind me</p>
-    <a class="u-in-reply-to" href="https://aaronparecki.com/2018/06/30/11/your-first-webmention">@aaronpk</a>
-</div>
 {% endblock %}

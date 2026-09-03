@@ -29,7 +29,7 @@
 
 {% macro page_h1(page) %}
 <h1>
-    {{ page.title }}<br />
+    <span class="p-name">{{ page.title }}</span><br />
     {% if page.date %}
     <small>({{ page.date }})</small>
     {% endif %}

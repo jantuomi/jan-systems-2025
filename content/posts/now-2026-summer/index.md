@@ -5,6 +5,7 @@ description: |
   Got married! Broke my elbow while bouldering, writing this on sick leave. Added Gemini capsule version of this site.
 extra:
   kind: now
+  wm_in_reply_to: "https://aaronparecki.com/2018/06/30/11/your-first-webmention"
 ---
 
 Got married! Broke my elbow while bouldering, writing this on sick leave. Added Gemini capsule version of this site.
