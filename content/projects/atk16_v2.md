@@ -486,3 +486,31 @@ Above `map` example hand-compiled:
     case3: [ lit 30 ] [ jmp :endwhen ]
     endwhen:
 ```
+
+## 2026-08-30 Instruction encoding
+
+Rows = low 3 bits of opcode, columns = high 3 bits. Col 6 instructions are long-form (followed by a 16-bit immediate word). Col 7 instructions encode a small immediate K in the instruction word itself.
+
+- 2026.8.30: New ideas
+  - A "GET k" instruction that pushes the kth element in the stack to the stack
+  - No inlining at all, to simplify
+  - No word-internal labels or jumps. A word is the smallest unit of code execution
+    - A word can be exited early with a jz/jmp or retz. call/callz create a new call frame (ie push PC+1 to CS). Just have to invent some syntax. Crude ideas:
+      - jmp:   >target or just [ jmp target ]
+      - jz:    ?>target or just [ jz target ]
+      - retz:  retz
+      - call:  target
+      - callz: ?target
+  - Stack assertion syntax ( a b c ) also names the stack values. The compiler keeps track of eg 8 names at once.
+    - Referring to a name emits a GET [H-k-1] where H is the stack height inside the word and k is the pos in the assertion
+
+|   | 0     | 1   | 2     | 3 | 4 | 5 | 6          | 7     |
+|---|-------|-----|-------|---|---|---|------------|-------|
+| 0 | nop   | add | d>c   |   |   |   | jmp 0xAB   |       |
+| 1 | halt  | sub | c>d   |   |   |   | jz 0xAB    |       |
+| 2 | load  | and | ret   |   |   |   | call 0xAB  |       |
+| 3 | store | or  | retz  |   |   |   | callz 0xAB |       |
+| 4 |       | xor | drop  |   |   |   | lit 0xAB   |       |
+| 5 |       | sll |       |   |   |   | get K      |       |
+| 6 |       | slr |       |   |   |   |            |       |
+| 7 |       | sar |       |   |   |   |            |       |

@@ -10,7 +10,7 @@ extra:
 
 Got married! Broke my elbow while bouldering, writing this on sick leave. Added Gemini capsule version of this site.
 
-{{ fig(src="joopo_wedding.jpg", alt="Jojo looked presentable at the wedding 🎀" )}}
+{{ fig(src="joopo_wedding.jpg", alt="Jojo looked presentable at the wedding 🎀 Credit: @henri.heilala.photo (Instagram)" )}}
 
 {{ toc() }}
 
