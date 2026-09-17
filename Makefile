@@ -6,7 +6,7 @@ linklog:
 	./update-linklog-json.sh
 
 .PHONY: build
-build: clean
+build: clean check-post-dates
 	@echo "Building project..."
 
 	# Build html
@@ -38,6 +38,10 @@ deploy:
 	@echo "Deploying project..."
 	rsync -rvzP --delete --chown 80:80 public_html/* $(RSYNC_TARGET_HTML)
 	rsync -rvzP --delete --chown 80:80 public_gmi/*  $(RSYNC_TARGET_GMI)
+
+.PHONY: check-post-dates
+check-post-dates:
+	./check-post-dates.sh
 
 .PHONY: clean
 clean:
