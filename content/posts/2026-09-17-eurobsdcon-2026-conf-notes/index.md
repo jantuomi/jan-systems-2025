@@ -5,6 +5,7 @@ slug: eurobsdcon-2026-conf-notes
 description: EuroBSDCon 2026 took place in Brussels, Belgium. Here are my impressions from the event, top three talks, and travel notes.
 extra:
   kind: note
+  indienews: true
 ---
 
 {{ toc() }}

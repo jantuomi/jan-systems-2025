@@ -41,5 +41,7 @@
 
 {% macro page_content(page) %}
 {{ self::page_h1(page=page) }}
+<div class="e-content">
 {{ page.content | replace(from="<!-- toc -->", to=macros::toc(page=page)) | safe }}
+</div>
 {% endmacro %}
