@@ -6,3 +6,4 @@ static/giallo.css
 .stfolder/
 .DS_Store
 .certificates/
+__pycache__/

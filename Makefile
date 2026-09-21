@@ -1,30 +1,26 @@
 .PHONY: all
-all: clean linklog build
+all: clean linklog public_html public_gmi
 
 .PHONY: linklog
 linklog:
 	./update-linklog-json.sh
 
-.PHONY: build
-build: clean check-post-dates
-	@echo "Building project..."
-
-	# Build html
-	ln -s templates_html templates
-	zola build -o public_html
+public_html: check-post-dates linklog
+	@echo "Building HTML..."
+	unlink templates 2>/dev/null || true && ln -s templates_html templates
+	zola build --force -o public_html
 	unlink templates || true
+	touch public_html
 
-	# Copy extra HTML pages
-	(cd extra_pages_html && cp -a . ../public_html/)
-
-	# Build gemini
-	ln -s templates_gmi templates
-	zola build -o public_gmi
+public_gmi: public_html
+	@echo "Building Gemini..."
+	unlink templates 2>/dev/null || true && ln -s templates_gmi templates
+	zola build --force -o public_gmi
+	unlink templates || true
 	find public_gmi -type f -name '*.html' -exec sh -c \
 		'for html do mv "$$html" "$${html%.html}.gmi"; done' sh {} +
-	# Convert HTML blocks to gemtext
 	./convert_gmi_html.py public_gmi
-	unlink templates || true
+	touch public_gmi
 
 .PHONY: dev
 dev:
@@ -34,10 +30,11 @@ dev:
 	trap 'unlink templates || true' EXIT; zola serve --drafts
 
 .PHONY: deploy
-deploy:
+deploy: public_html public_gmi
 	@echo "Deploying project..."
 	rsync -rvzP --delete --chown 80:80 public_html/* $(RSYNC_TARGET_HTML)
 	rsync -rvzP --delete --chown 80:80 public_gmi/*  $(RSYNC_TARGET_GMI)
+	./send-webmentions.py
 
 .PHONY: check-post-dates
 check-post-dates:
