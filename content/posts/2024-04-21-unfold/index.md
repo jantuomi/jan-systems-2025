@@ -8,6 +8,8 @@ extra:
   slideshow: defined
 ---
 
+> 🚨 Note! Due to changes in the website, the "literate slideshow" thing I'm talking about here is no longer working. Sorry!
+
 ## Lightning talk
 
 <p data-unfold-hidden>
@@ -15,6 +17,8 @@ I recently presented a lightning talk about the IndieWeb and personal websites t
 </p>
 
 {{ fig(src="indieweb_presentation.png", alt="A slide from the PowerPoint presentation") }}
+
+[Slideshow (pptx) available here](indieweb.pptx)
 
 ---
 
