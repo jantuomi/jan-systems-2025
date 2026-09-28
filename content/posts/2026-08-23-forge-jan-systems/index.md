@@ -5,6 +5,7 @@ description: |
 date: 2026-08-23
 slug: forge-jan-systems
 extra:
+  image: forge-cgit.png
   kind: post
 ---
 

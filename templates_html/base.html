@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="generator" content="pandoc" />
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, user-scalable=yes"
@@ -24,55 +23,53 @@
         />
         {% endif %}
 
-        {% block title %}
-        {% if page.title %}
-        <title>{{ page.title }} — {{ config.title }}</title>
-        {% elif section.title %}
-        <title>{{ section.title }} — {{ config.title }}</title>
+        {% block meta %}
+        {% set image_default = "/files/Jan_Tuomi_headshot.jpg" %}
+
+        {% if page %}
+            {% set page_title = page.title | default(value=config.title) %}
+            {% set page_url = page.permalink | default(value=config.base_url) %}
+            {% if page.extra.image %}
+                {% set page_image = page.permalink ~ page.extra.image %}
+            {% else %}
+                {% set page_image = config.base_url ~ image_default %}
+            {% endif %}
+            {% set page_desc = page.description %}
+            {% if not page_desc %}
+                {% set page_desc = page.summary | default(value="") | striptags %}
+            {% endif %}
+            {% if not page_desc %}
+                {% set page_desc = config.description %}
+            {% endif %}
+        {% elif section %}
+            {% set page_title = section.title | default(value=config.title) %}
+            {% set page_url = section.permalink | default(value=config.base_url) %}
+            {% if section.extra.image %}
+                {% set page_image = section.permalink ~ section.extra.image %}
+            {% else %}
+                {% set page_image = config.base_url ~ image_default %}
+            {% endif %}
+            {% set page_desc = section.description | default(value=config.description) %}
         {% else %}
-        <title>{{ config.title }}</title>
+            {% set page_title = config.title %}
+            {% set page_url = config.base_url %}
+            {% set page_image = config.base_url ~ image_default %}
+            {% set page_desc = config.description %}
         {% endif %}
+
+        <title>{% if page_title != config.title %}{{ page_title }} — {{ config.title }}{% else %}{{ config.title }}{% endif %}</title>
+        <meta name="description" content="{{ page_desc }}" />
+
+        <meta property="og:type" content="{% if page %}article{% else %}website{% endif %}" />
+        <meta property="og:site_name" content="{{ config.title }}" />
+        <meta property="og:url" content="{{ page_url }}" />
+        <meta property="og:title" content="{{ page_title }}" />
+        <meta property="og:description" content="{{ page_desc }}" />
+        <meta property="og:image" content="{{ page_image }}" />
+
+        <meta name="twitter:card" content="summary_large_image" />
         {% endblock %}
 
-        {% block description %}
-        {% if page.description %}
-        <meta name="description" content="{{ page.description }}" />
-        {% elif page.summary %}
-        <meta name="description" content="{{ page.summary | striptags }}" />
-        {% else %}
-        <meta name="description" content="{{ config.description }}" />
-        {% endif %}
-        {% endblock %}
-
-        <style>
-            @font-face {
-                font-family: "PT Sans";
-                src: url("/PTSans-Regular.ttf") format("truetype");
-                font-weight: normal;
-                font-style: normal;
-            }
-
-            @font-face {
-                font-family: "PT Sans";
-                src: url("/PTSans-Bold.ttf") format("truetype");
-                font-weight: bold;
-                font-style: normal;
-            }
-
-            @font-face {
-                font-family: "PT Sans";
-                src: url("/PTSans-Italic.ttf") format("truetype");
-                font-weight: normal;
-                font-style: italic;
-            }
-
-            @font-face {
-                font-family: "PT Sans";
-                src: url("/PTSans-BoldItalic.ttf") format("truetype");
-                font-weight: bold;
-                font-style: italic;
-            }
-        </style>
         <link rel="stylesheet" href="/style.css" />
 
         <link

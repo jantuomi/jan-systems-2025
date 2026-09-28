@@ -15,26 +15,8 @@ extra:
 - Painted some rooms. The previous owner left them in a sorry state.
 - Built a little bathroom shelf, a little nightstand and a sound diffuser. Getting the hang of woodworking.
 
-<style>
-.gallery {
-  display: flex;
-  flex-flow: row wrap;
-  margin: -10px;
-}
-.gallery a {
-  flex: 1;
-  min-width: 250px;
-  margin: 10px;
-}
-.gallery img {
-  margin-bottom: 0;
-}
-.gallery label {
-  text-align: center;
-  margin: auto;
-  font-style: italic;
-}
-</style>
+<link rel="stylesheet" href="style.css"></link>
+
 <p class="gallery">
 <a href="diffuser_1.jpg"><img src="diffuser_1.jpg" alt="Sawed and varnished wooden pegs waiting for assembly."></a>
 <a href="diffuser_2.jpg"><img src="diffuser_2.jpg" alt="A plywood board with a single row and column of pegs assembled on top."></a>

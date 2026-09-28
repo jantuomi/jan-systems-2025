@@ -1,0 +1,18 @@
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  margin: -10px;
+}
+.gallery a {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+.gallery img {
+  margin-bottom: 0;
+}
+.gallery label {
+  text-align: center;
+  margin: auto;
+  font-style: italic;
+}
