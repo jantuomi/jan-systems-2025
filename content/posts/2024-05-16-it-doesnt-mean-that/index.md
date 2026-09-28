@@ -7,7 +7,8 @@ extra:
   kind: note
 ---
 
-<img src="wikimedia_monad.svg" alt="A plain circle with a small dot in the center" style="max-height: 200px; margin-bottom: 0px" />
+<link rel="stylesheet" href="style.css"></link>
+<img src="wikimedia_monad.svg" alt="A plain circle with a small dot in the center" class="monad" />
 
 ## When I learned my first programming language
 

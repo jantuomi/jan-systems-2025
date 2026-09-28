@@ -284,6 +284,41 @@ li::marker {
     color: var(--link-color);
 }
 
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.display-none {
+    display: none;
+}
+
+.ff-initial {
+    font-family: initial;
+}
+
+.fp-headshot {
+    float: right;
+    width: 175px;
+    margin: 0 0 0 20px;
+}
+
+.fp-contact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 -16px;
+}
+
+.fp-contact > div {
+    flex: 1;
+    margin: 0 16px;
+    min-width: 300px;
+}
+
 .webrings p {
     margin: 0 !important;
 }
@@ -365,6 +400,12 @@ table tr {
 p {
     margin: 20px 0;
     line-height: 1.5;
+}
+
+.bandcamp-embed {
+    border: 0;
+    width: 350px;
+    height: 470px;
 }
 
 /* Required by Giallo (Zola syntax highlighter) */

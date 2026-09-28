@@ -9,7 +9,7 @@ extra:
 ---
 
 <blockquote>“My first impulse, when presented with any spanking-new piece of computer hardware, is to imagine how it will look in ten years’ time, gathering dust under a card table in a thrift shop.”
-<cite style="float: right">― William Gibson, Distrust That Particular Flavor</cite>
+<cite class="float-right">― William Gibson, Distrust That Particular Flavor</cite>
 </blockquote>
 <br>
 
