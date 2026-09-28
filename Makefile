@@ -7,14 +7,22 @@ linklog:
 
 public_html: check-post-dates linklog
 	@echo "Building HTML..."
-	unlink templates 2>/dev/null || true && ln -s templates_html templates
+	@if [ -e templates ]; then \
+		echo "Error: 'templates' link already exists, aborting."; \
+		exit 1; \
+	fi
+	ln -s templates_html templates
 	zola build --force -o public_html
 	unlink templates || true
 	touch public_html
 
 public_gmi: public_html
 	@echo "Building Gemini..."
-	unlink templates 2>/dev/null || true && ln -s templates_gmi templates
+	@if [ -e templates ]; then \
+		echo "Error: 'templates' link already exists, aborting."; \
+		exit 1; \
+	fi
+	ln -s templates_gmi templates
 	zola build --force -o public_gmi
 	unlink templates || true
 	find public_gmi -type f -name '*.html' -exec sh -c \
@@ -24,7 +32,10 @@ public_gmi: public_html
 
 .PHONY: dev
 dev:
-	unlink templates || true
+	@if [ -e templates ]; then \
+		echo "Error: 'templates' link already exists, aborting."; \
+		exit 1; \
+	fi
 	ln -s templates_html templates
 	@echo "Starting development server..."
 	trap 'unlink templates || true' EXIT; zola serve --drafts

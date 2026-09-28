@@ -7,3 +7,4 @@ static/giallo.css
 .DS_Store
 .certificates/
 __pycache__/
+templates
