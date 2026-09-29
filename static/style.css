@@ -399,18 +399,23 @@ li::marker {
     display: inline-block;
 }
 
-table td {
+td, th {
+    padding: 2px 5px;
+    border-top: none;
+    border-bottom: none;
+    text-align: left;
+}
+
+td {
+    border-left: 1px solid var(--p-color);
+    border-right: 1px solid var(--p-color);
     width: 1%; /* I have no idea why this makes columns responsive width */
     min-width: 150px;
 }
 
-th {
-    border-top: none;
-}
-
 tbody {
     border-bottom: none;
-    border-top: 2px solid var(--blockquote-color);
+    border-top: 1px solid var(--blockquote-color);
 }
 
 table .odd {
@@ -419,6 +424,7 @@ table .odd {
 
 table {
     margin: 20px 0 30px;
+    border-collapse: collapse;
 }
 
 table tr {
