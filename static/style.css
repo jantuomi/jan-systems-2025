@@ -265,6 +265,10 @@ figure {
         max-width: calc(100% + 2 * 15px);
         margin: 20px -15px;
     }
+
+    table {
+        margin: 20px -15px !important;
+    }
 }
 
 figure img {
