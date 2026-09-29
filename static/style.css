@@ -422,18 +422,18 @@ tbody {
     border-top: 1px solid var(--blockquote-color);
 }
 
-table .odd {
-    background-color: var(--blockquote-bg-color);
-}
-
 table {
     margin: 20px 0 30px;
     border-collapse: collapse;
 }
 
-table tr {
-    border-bottom: 1px dotted var(--p-color);
+tr {
+    border-bottom: 1px solid var(--p-color);
 }
+
+/*tbody tr:nth-of-type(2n + 1) {
+    background-color: var(--blockquote-bg-color);
+}*/
 
 p {
     margin: 20px 0;
