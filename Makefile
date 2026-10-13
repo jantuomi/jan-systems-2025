@@ -1,3 +1,5 @@
+ZOLA ?= zola
+
 .PHONY: all
 all: clean linklog public_html public_gmi
 
@@ -12,7 +14,7 @@ public_html: check-post-dates linklog
 		exit 1; \
 	fi
 	ln -s templates_html templates
-	zola build --force -o public_html
+	$(ZOLA) build --force -o public_html
 	unlink templates || true
 	touch public_html
 
@@ -23,7 +25,7 @@ public_gmi: public_html
 		exit 1; \
 	fi
 	ln -s templates_gmi templates
-	zola build --force -o public_gmi
+	$(ZOLA) build --force -o public_gmi
 	unlink templates || true
 	find public_gmi -type f -name '*.html' -exec sh -c \
 		'for html do mv "$$html" "$${html%.html}.gmi"; done' sh {} +
@@ -38,7 +40,7 @@ dev:
 	fi
 	ln -s templates_html templates
 	@echo "Starting development server..."
-	trap 'unlink templates || true' EXIT; zola serve --drafts
+	trap 'unlink templates || true' EXIT; $(ZOLA) serve --drafts
 
 .PHONY: deploy
 deploy: public_html public_gmi
