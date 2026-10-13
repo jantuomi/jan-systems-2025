@@ -13,7 +13,7 @@ They feel much more approachable than vinyls. I dislike snobbery.
 
 ## So I bought a cassette player
 
-{{ fig(src="cassette_player.jpeg", alt="A Sony cassette recorder next to a pile of cassettes") }}
+{{ <fig src="cassette_player.jpeg" alt="A Sony cassette recorder next to a pile of cassettes" page /> }}
 
 It’s a Sony TCM-459V and it’s only a bit noisy and wobbly. It can record too.
 

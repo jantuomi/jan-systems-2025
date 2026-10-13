@@ -9,7 +9,7 @@ extra:
 
 Planning the wedding, reworking my wardrobe. Home reno.
 
-{{ fig(src="17670809516920.jpg", alt="Dogs playing in the dog park.") }}
+{{ <fig src="17670809516920.jpg" alt="Dogs playing in the dog park." page /> }}
 
 Jojo (the shiba inu) breached containment one night. We were going to take him out on a walk but the dog was nowhere to be seen. The backyard gate was slightly open. We tried finding him by driving around the neighborhood. Some people on social media had seen him walking around so we tried to track him, but we were always too late to the scene.
 
@@ -17,7 +17,7 @@ Luckily, he walked back home and was waiting for us in the backyard.
 
 You're a smart boy, Jojo, but don't do that again. One of the most stressful evenings of my life.
 
-{{ toc() }}
+{{ <toc /> }}
 
 ## TV & anime
 
@@ -77,7 +77,7 @@ I really enjoyed their music in 2025, but I won't be supporting them anymore.
 
 ### Top tunes
 
-{{ bandcamp_embed(album_id="2777761805", album_url="https://agriculturemusic.bandcamp.com/album/the-spiritual-sound", text="The Spiritual Sound by Agriculture") }}
+{{ <bandcamp_embed album_id="2777761805" album_url="https://agriculturemusic.bandcamp.com/album/the-spiritual-sound" text="The Spiritual Sound by Agriculture" /> }}
 
 
 ## This website

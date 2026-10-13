@@ -12,9 +12,9 @@ extra:
 
 Got married! Broke my elbow while bouldering, writing this on sick leave. Added Gemini capsule version of this site.
 
-{{ fig(src="joopo_wedding.jpg", alt="Jojo looked presentable at the wedding 🎀 Credit: @henri.heilala.photo (Instagram)" )}}
+{{ <fig src="joopo_wedding.jpg" alt="Jojo looked presentable at the wedding 🎀 Credit: @henri.heilala.photo (Instagram)" page /> }}
 
-{{ toc() }}
+{{ <toc /> }}
 
 ## Wedding and new surname
 
@@ -91,7 +91,7 @@ The opening acts Acid Bath and Queens of the Stone Age were okay, not really a f
 
 The main act, however, was insane. The whole arena was singing along to pretty much every tune. Happy to have seen them live!
 
-{{ fig(src="gig.png", alt="People on the floor look like ants." )}}
+{{ <fig src="gig.png" alt="People on the floor look like ants." page /> }}
 
 ### Dungeon synth live practice
 
@@ -103,7 +103,7 @@ Me and Juuso (aka [Blek](https://blekmusik.bandcamp.com/album/m-rkret-efter-solu
 
 I've been digging this doom metal outfit called Faetooth lately.
 
-{{ bandcamp_embed(album_id="2239340294", album_url="https://faetooth.bandcamp.com/album/labyrinthine", text="Labyrinthine by Faetooth") }}
+{{ <bandcamp_embed album_id="2239340294" album_url="https://faetooth.bandcamp.com/album/labyrinthine" text="Labyrinthine by Faetooth" /> }}
 
 ## Anime & movies
 

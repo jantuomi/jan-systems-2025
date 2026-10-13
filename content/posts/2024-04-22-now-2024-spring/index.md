@@ -14,7 +14,7 @@ Inches of snow are falling on the yard, covering any new green growths. The dog 
 Your browser does not support the video tag.  
 </video>
 
-{{ toc() }}
+{{ <toc /> }}
 
 ## Travel
 

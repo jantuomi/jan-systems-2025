@@ -33,7 +33,7 @@ Making changes to the build process itself, or the HTML template, requires a com
 
 Most of the heavy lifting is done by `pandoc`. The glue parts use an obscure and ancient language with many curved sigils. Give it a try.
 
-{{ fig(src="repo_langs.png", alt="A GitHub repository language breakdown showing that most of the code is written in Scheme.") }}
+{{ <fig src="repo_langs.png" alt="A GitHub repository language breakdown showing that most of the code is written in Scheme." page /> }}
 
 ## Hosting
 

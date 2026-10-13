@@ -25,14 +25,14 @@ There are no collaboration features. You can email me a link to your fork if you
 
 There is no CI/CD. I don't really see the point for pipelines in personal projects. A `Makefile` and some Git hooks together often create a comfortable level of automation and immediacy.
 
-{{ fig(src="forge-cgit.png", alt="The diddle project, as seen in the forge.") }}
+{{ <fig src="forge-cgit.png" alt="The diddle project, as seen in the forge." page /> }}
 
 
 ## Management TUI
 
 My solution is heavily inspired by [William Brawner's blog post](https://wbrawner.com/2019/02/16/a-simple-self-hosted-git-server/), go read it.
 
-{{ fig(src="forge-tui.png", alt="A screen capture of the TUI, showing help text and ls output.") }}
+{{ <fig src="forge-tui.png" alt="A screen capture of the TUI, showing help text and ls output." page /> }}
 
 I can do basic CRUD operations on repositories using this interface. It also let's me set up mirrors in either direction. Currently I have set up mirrors for most of my GitHub and GitLab repos, so that the repos are still accessible where they were originally created.
 

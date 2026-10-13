@@ -10,4 +10,4 @@ My public bookmarks are stored in [Linkhut](https://ln.ht/~jant). This page cont
 
 Follow my full Linkhut feed via [Atom/RSS](https://ln.ht/_/feed/~jant) ([Huh?](https://aboutfeeds.com/)).
 
-{{ linklog() }}
+{{ <linklog /> }}

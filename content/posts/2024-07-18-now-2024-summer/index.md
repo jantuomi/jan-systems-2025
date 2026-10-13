@@ -7,7 +7,7 @@ extra:
   kind: now
 ---
 
-{{ toc() }}
+{{ <toc /> }}
 
 ## Home
 
@@ -18,13 +18,13 @@ extra:
 
 - Started learning about wines. Organized a wine tasting. My top pick: Domaine Laroche Chablis 1er Cru Les Vaudevey 2022.
 
-{{ fig(src="2024-wines.jpg", alt="Wines from the tasting") }}
+{{ <fig src="2024-wines.jpg" alt="Wines from the tasting" page /> }}
 
 ### Career
 
 - I passed the **AWS Certified Developer Associate** certificate exam! A celebratory espresso martini was in order. Planning to do **Solutions Architect Associate** next.
 
-{{ fig(src="aws-exam-drink.jpeg", alt="My hand holding an espresso martini outside in sunny weather") }}
+{{ <fig src="aws-exam-drink.jpeg" alt="My hand holding an espresso martini outside in sunny weather" page /> }}
 
 ## Played games
 

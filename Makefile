@@ -1,3 +1,4 @@
+# Templates require Zola 0.23.6+ (Tera 2); override with make ZOLA=/path/to/zola.
 ZOLA ?= zola
 
 .PHONY: all

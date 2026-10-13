@@ -12,7 +12,7 @@ This is the fourth episode in a series where I set up a FreeBSD home server, exp
 
 Check out episodes [1](/posts/home-server-part-1), [2](/posts/home-server-part-2), [3](/posts/home-server-part-3).
 
-{{ toc() }}
+{{ <toc /> }}
 
 ## Dual interfaces
 
@@ -20,7 +20,7 @@ I already have a private network (`192.168.0.0/16`) that uses my pfSense router 
 
 The host will also be connected directly to the ISP's network using its second interface (`wan0`). This interface will get its IP using DHCP. Packets to the internet, as well as packets to public services running on the FreeBSD host go through this interface.
 
-{{ fig(src="pursotin_network.svg", alt="A simplified diagram showing the two interfaces") }}
+{{ <fig src="pursotin_network.svg" alt="A simplified diagram showing the two interfaces" page /> }}
 
 A dual interface set up like this is simple in theory, but there are important nuances, e.g. regarding return traffic routing and DNS.
 

@@ -10,7 +10,7 @@ extra:
 
 > **Abstract**: Linux software distributed as OCI container images can be extracted into a FreeBSD jail with Linux compatibility enabled. With a couple of mounts set up to make the extracted root a valid Linux userland, the "container" can run like a regular jail without involving virtual machines or a separate control interface (`podman`). Isolation is handled by the jail subsystem.
 
-{{ toc() }}
+{{ <toc /> }}
 
 FreeBSD has a respectable library of ported software in the [ports tree](https://www.freshports.org). Getting ported software set up is usually just a `pkg install` away. Sometimes you have to take a couple of extra steps and run a `make install`. Some programs do not have a port but can be made to run anyway, by tweaking a Makefile, setting up an ad-hoc Python environment, or something to that effect.
 

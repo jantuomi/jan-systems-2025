@@ -7,7 +7,7 @@ extra:
   kind: now
 ---
 
-{{ toc() }}
+{{ <toc /> }}
 
 ## Currently
 

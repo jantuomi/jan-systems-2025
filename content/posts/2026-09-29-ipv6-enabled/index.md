@@ -24,7 +24,7 @@ IPv6 readiness has been a TODO item for me for a very long time. Earlier attempt
 
 I have two distinct approaches to IPv6 adoption, one for my home server and one for my router and LAN devices.
 
-{{ fig(src="rack.jpg", alt="My network rack with the server and router, happily chatting over IPv6.") }}
+{{ <fig src="rack.jpg" alt="My network rack with the server and router, happily chatting over IPv6." page /> }}
 
 ## Server: DHCPv6, IA_NA
 

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% import "macros.html" as macros %}
 
 {% block content %}
-{{ page.content | replace(from="<!-- linklog -->", to=macros::linklog(page=page)) | safe }}
+{% set links %}{{ <linklog_entries /> }}{% endset %}
+{{ page.content | safe | replace(from="<!-- linklog -->", to=links) }}
 {% endblock %}

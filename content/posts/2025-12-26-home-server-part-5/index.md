@@ -12,7 +12,7 @@ This is the fifth episode in a series where I set up a FreeBSD home server, expl
 
 Check out episodes [1](/posts/home-server-part-1), [2](/posts/home-server-part-2), [3](/posts/home-server-part-3), [4](/posts/home-server-part-4).
 
-{{ toc() }}
+{{ <toc /> }}
 
 ## Automation
 
@@ -59,7 +59,7 @@ Let's borrow and tweak the standard cloud infrastructure stack diagram that show
 
 My current approach is to use Ansible for the "core" parts of server administration, installing packages, defining service jails, etc:
 
-{{ fig(src="pursotin_stack.svg", alt="A stack model depicting the software layers in my server") }}
+{{ <fig src="pursotin_stack.svg" alt="A stack model depicting the software layers in my server" page /> }}
 
 Some notes about this setup:
 
@@ -72,7 +72,7 @@ Ansible is very simple. It's pretty much a framework to write idempotent shell s
 
 It's agentless. I don't have to run a service on the FreeBSD host to use Ansible. It uses SSH as transport and runs the tasks with Python, both of which are software that I expect to be present on any \*nix server.
 
-{{ fig(src="ansible_task_postgres.png", alt='A snippet of Ansible playbook installing PostgreSQL in the "postgres" jail') }}
+{{ <fig src="ansible_task_postgres.png" alt='A snippet of Ansible playbook installing PostgreSQL in the "postgres" jail' page /> }}
 
 ## How about containers?
 
@@ -84,7 +84,7 @@ Many OCI container concepts translate well to jails, but jails are somewhat more
 
 Only `ssh`, `bash`, `vim` and some other packages are installed on the host directly. Everything else is 🔐 _incarcerated_ 🔐.
 
-{{ fig(src="pursotin_jls.png", alt='A list of running jails on the server') }}
+{{ <fig src="pursotin_jls.png" alt='A list of running jails on the server' page /> }}
 
 ### FreeBSD OCI container support
 

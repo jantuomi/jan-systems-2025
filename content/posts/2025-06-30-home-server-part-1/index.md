@@ -10,9 +10,9 @@ extra:
 
 This is the first post in a blog series chronicling my progress with designing and setting up a new, physical FreeBSD home server. I'm guessing this will become at least a three-parter, but that depends on how things actually go, and how in-depth I happen to write. This first part is about my motivations and requirements, whereas the latter ones will be more technical-deepdive-like.
 
-{{ toc() }}
+{{ <toc /> }}
 
-{{ fig(src="aliexpress_minipc.png", alt="A promotional image portraying the mini-PC I ended up getting") }}
+{{ <fig src="aliexpress_minipc.png" alt="A promotional image portraying the mini-PC I ended up getting" page /> }}
 
 ## I need a place to run code and store files
 
@@ -22,13 +22,13 @@ I also need to store files somewhere, like everyone that partakes in the modern 
 
 I have a trusty Ubuntu server, chugging away in some rack in a DigitalOcean datacenter in Amsterdam. Even though DigitalOcean pricing is pretty reasonable for individuals in general, my monthly price tag is around ~35€, after taxes. That sum is based on the cost of running a medium sized x86-64 instance and storing some backup snapshots from that machine. Times twelve, that comes to around 420€ per year. To me, that is a sizeable amount of money.
 
-{{ fig(src="do-june-billing.png", alt="DigitalOcean is charging $36.14 this month") }}
+{{ <fig src="do-june-billing.png" alt="DigitalOcean is charging $36.14 this month" page /> }}
 
 > 🤔 I would like to run a smaller instance, but I needed a certain level of RAM to reliably run Obsidian Sync. For whatever reason, less memory would have the app crash intermittently.
 
 Having upgraded to instance to the current size, it is hard to downscale back to a smaller machine. It is possible, of course. But instead of doing that, I started to consider an alternative: maybe I could save some coins and get some hardware of my own, like in the prehistoric times, before cloud services became the de-facto way to run anything. With one year's cloud costs, I could surely get a capable small machine.
 
-{{ fig(src="old-man-yells-at-cloud.png", alt="Old man yells at Cloud (FFVII)") }}
+{{ <fig src="old-man-yells-at-cloud.png" alt="Old man yells at Cloud (FFVII)" page /> }}
 
 ## Ownership and control
 
@@ -44,7 +44,7 @@ I could provide these capabilities to myself, by managing my own hardware and ne
 
 To replace something as generally trusted and widely used as Google Drive requires some proper thinking. I haven't previously set up any redundant disk storage. My systems have never followed the [3-2-1 backup rule](https://en.wikipedia.org/wiki/Backup#3-2-1_Backup_Rule).
 
-{{ fig(src="3-2-1-Backup-Rule.png", alt="Maintain at least 3 copies of your data, keep 2 copies stored at separate locations, store at least 1 copy at an off-site location. Source: msp360.com") }}
+{{ <fig src="3-2-1-Backup-Rule.png" alt="Maintain at least 3 copies of your data, keep 2 copies stored at separate locations, store at least 1 copy at an off-site location. Source: msp360.com" page /> }}
 
 Reaching for full ownership and control is not solely an objective aim. It is in part psychological, an attempt to get back control in a world of weakening privacy and walled content gardens. It is driven by emotion. And this is completely fine: humans are allowed to be motivated by emotion, especially when it comes to personal, hobby-adjacent things. To claim otherwise would be dishonest.
 

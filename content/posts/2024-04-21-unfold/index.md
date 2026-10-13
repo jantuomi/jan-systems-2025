@@ -16,7 +16,7 @@ extra:
 I recently presented a lightning talk about the IndieWeb and personal websites to my colleagues at the office. Even though I don't normally enjoy presenting, speaking about things I'm passionate about always turns out to be rather easy. The talk and the presentation that I used to support the talk were well received.
 </p>
 
-{{ fig(src="indieweb_presentation.png", alt="A slide from the PowerPoint presentation") }}
+{{ <fig src="indieweb_presentation.png" alt="A slide from the PowerPoint presentation" page /> }}
 
 [Slideshow (pptx) available here](indieweb.pptx)
 
@@ -31,7 +31,7 @@ Later, when I shared my PowerPoint slides in the IndieWeb chat, I was asked if I
 So curious in fact, that I decided to study up on the ”HTML slideshow landscape”: what kind of tools there are, how do they work on a static site, things like that. Turns out that a tool called `reveal.js` is very popular and often recommended.  An idea entered my mind: what if I could turn an HTML note (like this one that you’re reading) into an HTML slideshow, in a somewhat automated fashion?
 </p>
 
-{{ fig(src="reveal-js-logo.png", alt="Reveal.js logo") }}
+{{ <fig src="reveal-js-logo.png" alt="Reveal.js logo" page /> }}
 
 ---
 

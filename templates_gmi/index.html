@@ -12,7 +12,7 @@ I created this site² as a creative outlet for expressing myself and sharing my 
 
 ## Latest posts
 {% set posts = get_section(path="posts/_index.md") %}
-{% for page in posts.pages | slice(end=3) -%}
+{% for page in posts.pages[:3] -%}
 => {{ page.path }} {{ page.date | date(format="%Y-%m-%d") }} {{ page.title }}
 {% endfor %}
 

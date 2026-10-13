@@ -9,9 +9,9 @@ extra:
   indienews: true
 ---
 
-{{ toc() }}
+{{ <toc /> }}
 
-{{ fig(src="atomium.jpeg",alt="The Atomium, an educational and cultural landmark in Brussels.") }}
+{{ <fig src="atomium.jpeg" alt="The Atomium, an educational and cultural landmark in Brussels." page /> }}
 
 ## EuroBSDCon 2026
 
@@ -49,7 +49,7 @@ We learned about the ports framework, i.e. the system for making arbitrary softw
 
 I got answers to a number or questions that had been bugging me about the port patching process. I also got my own account set up on the FreeBSD Bugzilla; I'm ready to submit some of my ports!
 
-{{ fig(src="recharging.jpeg", alt="Me recharging outside the venue after a full day of talks. Photo credit: Oks4@Libera.Chat") }}
+{{ <fig src="recharging.jpeg" alt="Me recharging outside the venue after a full day of talks. Photo credit: Oks4@Libera.Chat" page /> }}
 
 ## My top three talks
 
@@ -98,13 +98,13 @@ The system is now in review, and if it gets merged, it will be supported beside 
 
 I had some time on my arrival day and during evenings to walk around the city center and see some sights. Since I was not at my regular capacity in terms of health and energy, I made a very compact list of things to see and try during the trip.
 
-{{ fig(src="volauvent.jpeg", alt="Vol-au-vent and Leffe Blonde at Brasserie du Primrose") }}
+{{ <fig src="volauvent.jpeg" alt="Vol-au-vent and Leffe Blonde at Brasserie du Primrose" page /> }}
 
 On the list I had a couple of traditional foods I wanted to try. The first was *vol-au-vent* (pictured), a chicken and mushroom stew. After checking out the Atomium, I visited a nearby sports bar/pub/restaurant, where I got a serving of this dish. Pleasant and easy flavor, goes down well with a pint.
 
 Next on the list was *Carbonnade a là Flamande*, a dark ale-based (beef?) stew. Very comforting food on a rainy day. I had this at some touristy place at Grand Place.
 
-{{ fig(src="grand_place.jpeg", alt="Buildings at the Grand Place on a nice half-cloudy, half-sunny day") }}
+{{ <fig src="grand_place.jpeg" alt="Buildings at the Grand Place on a nice half-cloudy, half-sunny day" page /> }}
 
 And of course, I tried Belgian chocolates and waffles. Pretty good!
 

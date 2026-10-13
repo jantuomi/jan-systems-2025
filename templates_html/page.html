@@ -1,19 +1,18 @@
 {% extends "base.html" %}
-{% import "macros.html" as macros %}
 {% block content %}
 
 <article class="h-entry">
-{{ macros::page_content(page=page) }}
+{{ <page_content page /> }}
 <span class="p-author h-card">
     <img class="u-photo display-none" src="https://jan.systems/files/Jan_Tuomi_headshot.jpg" loading="lazy" />
     <a class="p-name u-url display-none" href="https://jan.systems">Jan Sydänviita (né Tuomi)</a>
 </span>
 <a class="u-url" href="{{ page.permalink }}" hidden></a>
 <time class="dt-published" datetime="{{ page.date }}" hidden></time>
-{% if page.extra.wm_in_reply_to %}
+{% if page.extra?.wm_in_reply_to %}
 <a class="u-in-reply-to" href="{{ page.extra.wm_in_reply_to }}" hidden></a>
 {% endif %}
-{% if page.extra.indienews %}
+{% if page.extra?.indienews %}
 <a class="u-category" href="https://news.indieweb.org/en" hidden></a>
 {% endif %}
 

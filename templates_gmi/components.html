@@ -1,0 +1,43 @@
+{% component page_toc(page) %}{% endcomponent page_toc %}
+
+{% component linklog_entries() %}
+{% set lh_data = load_data(path="linklog.json") %}
+<!-- END_GEMINI_CONTENT -->
+{% for lh_post in lh_data.posts -%}
+=> {{ lh_post.href }} {{ lh_post.time | date(format='%Y-%m-%d') }} {{ lh_post.description }}
+{% endfor %}
+<!-- START_GEMINI_CONTENT -->
+{% endcomponent linklog_entries %}
+
+{% component page_h1(page) %}
+# {{ page.title }}
+
+{% if page.date %}📅 {{ page.date }}{% endif %}
+{% if page.extra?.kind %}🏷️ {{ page.extra.kind }}{% endif %}
+{% endcomponent page_h1 %}
+
+{% component page_content(page) %}
+{{ <page_h1 page /> }}
+<!-- START_GEMINI_CONTENT -->
+{% set toc_content %}{{ <page_toc page /> }}{% endset %}
+{{ page.content | safe | replace(from="<!-- toc -->", to=toc_content) }}
+<!-- END_GEMINI_CONTENT -->
+{% endcomponent page_content %}
+
+{% component toc() %}<!-- toc -->{% endcomponent toc %}
+{% component linklog() %}<!-- linklog -->{% endcomponent linklog %}
+
+{% component fig(src, alt, page) %}
+{% if src is starting_with(pat="/") %}
+{% set img_src = src %}
+{% else %}
+{% set img_src = page.path ~ src %}
+{% endif %}
+=> {{ img_src }} {{ alt }}
+{% endcomponent fig %}
+
+{% component bandcamp_embed(album_id, album_url, text) %}
+=> {{ album_url }} {{ text }}
+{% endcomponent bandcamp_embed %}
+
+{% component html_only() %}{% endcomponent html_only %}

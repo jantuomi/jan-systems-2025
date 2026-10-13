@@ -21,9 +21,8 @@ lazy_async_image = false
 insert_anchor_links = "heading"
 
 [markdown.highlighting]
-# A valid theme is required, but not actually used. `style.css` overrides the highlighting classes (z-*).
-# Causes static/giallo.css to be generated.
-theme = "github-dark"
+# Zola generates giallo.css in the output directory; style.css overrides the code block background.
+theme = "dracula"
 style = "class"
 error_on_missing_language = true
 

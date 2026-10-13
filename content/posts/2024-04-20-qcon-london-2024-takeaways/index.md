@@ -11,7 +11,7 @@ QCon London 2024 was a multidisciplinary software engineering conference in the 
 
 This was also my first time in the UK so I had to do some touristing. The weather was a bit chilly, half-cloudy with some intermittent drizzle.
 
-{{ fig(src="london-from-above.jpg", alt="London from above in the late evening") }}
+{{ <fig src="london-from-above.jpg" alt="London from above in the late evening" page /> }}
 
 ## Common themes
 
@@ -111,4 +111,4 @@ Nothing mindblowing, just good ale and a comfy vibe. A good place to sit out the
 
 I had to eat fish & chips at least once just to check it off my bucket list. I don't know if theirs is the best or even proper, but I enjoyed it a lot.
 
-{{ fig(src="fish-and-chips-duke-of-argyll.jpg", alt="Fish and chips at the Duke of Argyll") }}
+{{ <fig src="fish-and-chips-duke-of-argyll.jpg" alt="Fish and chips at the Duke of Argyll" page /> }}

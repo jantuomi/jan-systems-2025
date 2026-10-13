@@ -15,7 +15,7 @@ Diddle ([live instance](https://diddle.jan.systems/), [Github](https://github.co
 
 **Note**: The instance hosted on my domain might go down any second. Use it at your own discretion.
 
-{{ fig(src="diddle_screenshot.png", alt="Diddle screenshot showing an answerable poll") }}
+{{ <fig src="diddle_screenshot.png" alt="Diddle screenshot showing an answerable poll" page /> }}
 
 The first 80% of the project was done in two evenings. The last 80% was done during the next week. The tech stack is the _get-shit-done_ stack: **Python** + **Flask** + **PostgreSQL**. There is no required client side javascript: all client side logic is strictly for [progressive enhancement](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement). You can use "dumb" browsers like w3m or lynx to enjoy Diddle just fine.
 

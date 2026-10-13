@@ -13,7 +13,7 @@ My event experience consisted of two days of "trainings", sometimes also referre
 
 The event was held at the Faculty of Electrical Engineering and Computing (University of Zagreb). The venue was nostalgic in a way since it reminded me a lot of the building where I started my studies in Aalto University. Functional.
 
-{{ fig(src="eurobsdcon_2025_hallway.jpeg", alt="A photo of a stairway in the conference venue") }}
+{{ <fig src="eurobsdcon_2025_hallway.jpeg" alt="A photo of a stairway in the conference venue" page /> }}
 
 Recordings from the presentation rooms can be found on [Youtube](https://www.youtube.com/playlist?list=PLskKNopggjc6bnhXOX5MQbaPKEvohzjYH). You might have to check the talk schedule to find the timestamp of a given talk.
 
@@ -25,7 +25,7 @@ I attended a two day lab by Prof. Kirk McKusick, who is a well known figure in t
 
 You see, I'm not a huge kernel guy (at least not yet) so I was a bit worried that the lab content would go over my head. What happened though surprised me: I understood something like 90% of the material. Apparently I had the necessary prerequisite knowledge after all, or maybe Kirk was just so good at teaching. Maybe both.
 
-{{ fig(src="eurobsdcon_2025_binders.jpeg", alt="Two spiral notebooks of lecture notes, one for each day") }}
+{{ <fig src="eurobsdcon_2025_binders.jpeg" alt="Two spiral notebooks of lecture notes, one for each day" page /> }}
 
 ## Favorite talks
 
@@ -63,7 +63,7 @@ I noticed that there was very little "hierarchy" at the event. Speakers, sponsor
 
 Since the event, I have familiarised myself with BSD community channels such as the [FreeBSD IRC channels](https://wiki.freebsd.org/IRC/Channels) on Libera.Chat and the various forums of [BSD Cafe](https://wiki.bsd.cafe/), hosted by Stefano Marinelli, who was also speaking at the conference.
 
-{{ fig(src="eurobsdcon_2025_group.jpeg", alt="A group photo was taken on the final day") }}
+{{ <fig src="eurobsdcon_2025_group.jpeg" alt="A group photo was taken on the final day" page /> }}
 
 ## There and back again, and the touristy bits
 
@@ -76,7 +76,7 @@ Traditional & local foods were my primary target when looking for restaurants. M
 - **ćevapi** at _Plac_ ([Tripadvisor](https://www.tripadvisor.com/Restaurant_Review-g294454-d7075337-Reviews-Plac-Zagreb_Central_Croatia.html)), pictured below
 - **štrukli** at _La Štruk_ ([Website](https://www.lastruk.com/))
 
-{{ fig(src="eurobsdcon_2025_cevapi.jpeg", alt="A serving of ćevapi with cream cheese and paprika spread") }}
+{{ <fig src="eurobsdcon_2025_cevapi.jpeg" alt="A serving of ćevapi with cream cheese and paprika spread" page /> }}
 
 The return trip was more eventful. The plane didn't start boarding until it was more than an hour late. We were never told the reason. That delay caused me to miss my connecting flight 😑
 

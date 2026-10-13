@@ -1,7 +1,6 @@
 {% extends "base.html" %}
-{% import "macros.html" as macros %}
 {% block content %}
-{{ macros::page_content(page=page) }}
+{{ <page_content page /> }}
 
 {% if page.higher %}
 => {{ page.higher.path }} ← {{ page.higher.title }}

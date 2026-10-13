@@ -1,0 +1,69 @@
+{% component page_toc(page) %}
+<nav class="toc">
+  <ul>
+    {% for h in page.toc %}
+      <li><a href="{{ h.permalink }}">{{ h.title }}</a></li>
+      {% if h.children %}
+        <ul>
+          {% for c in h.children %}
+            <li><a href="{{ c.permalink }}">{{ c.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
+{% endcomponent page_toc %}
+
+{% component linklog_entries() %}
+{% set lh_data = load_data(path="linklog.json") %}
+<ul class="archive-list">
+{% for lh_post in lh_data.posts %}
+    <li class="archive-entry">
+    <a href="{{ lh_post.href }}">{{ lh_post.description }}</a>
+    <small>({{ lh_post.time | date(format='%Y-%m-%d') }})</small>
+    </li>
+{% endfor %}
+</ul>
+{% endcomponent linklog_entries %}
+
+{% component page_h1(page) %}
+<h1>
+    <span class="p-name">{{ page.title }}</span><br />
+    {% if page.date %}
+    <small>({{ page.date }})</small>
+    {% endif %}
+    {% if page.extra?.kind %}
+    <small>[{{ page.extra.kind }}]</small>
+    {% endif %}
+</h1>
+{% endcomponent page_h1 %}
+
+{% component page_content(page) %}
+{{ <page_h1 page /> }}
+<div class="e-content">
+{% set toc_content %}{{ <page_toc page /> }}{% endset %}
+{{ page.content | safe | replace(from="<!-- toc -->", to=toc_content) }}
+</div>
+{% endcomponent page_content %}
+
+{% component toc() %}<!-- toc -->{% endcomponent toc %}
+{% component linklog() %}<!-- linklog -->{% endcomponent linklog %}
+
+{% component fig(src, alt, page) %}
+{% if src is starting_with(pat="/") %}
+{% set img_src = src %}
+{% else %}
+{% set img_src = page.path ~ src %}
+{% endif %}
+<figure>
+    <img src="{{ img_src | escape_html | safe }}" alt="{{ alt | escape_html | safe }}" />
+    <figcaption aria-hidden="true">{{ alt | escape_html | safe }}</figcaption>
+</figure>
+{% endcomponent fig %}
+
+{% component bandcamp_embed(album_id, album_url, text) %}
+<iframe class="bandcamp-embed" src="https://bandcamp.com/EmbeddedPlayer/album={{ album_id | escape_html | safe }}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="{{ album_url | escape_html | safe }}">{{ text | escape_html | safe }}</a></iframe>
+{% endcomponent bandcamp_embed %}
+
+{% component html_only() %}{{ body | safe }}{% endcomponent html_only %}
