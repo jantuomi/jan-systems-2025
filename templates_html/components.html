@@ -64,8 +64,12 @@
 </figure>
 {% endcomponent fig %}
 
-{% component bandcamp_embed(album_id, album_url, text) %}
+{% component bandcamp_embed_album(album_id, album_url, text) %}
 <iframe class="bandcamp-embed" src="https://bandcamp.com/EmbeddedPlayer/album={{ album_id | escape_html | safe }}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="{{ album_url | escape_html | safe }}">{{ text | escape_html | safe }}</a></iframe>
-{% endcomponent bandcamp_embed %}
+{% endcomponent bandcamp_embed_album %}
+
+{% component bandcamp_embed_track(album_id, track_id, album_url, text) %}
+<iframe class="bandcamp-embed bandcamp-embed-track" src="https://bandcamp.com/EmbeddedPlayer/album={{ album_id | escape_html | safe }}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track={{ track_id | escape_html | safe }}/transparent=true/" seamless><a href="{{ album_url | escape_html | safe }}">{{ text | escape_html | safe }}</a></iframe>
+{% endcomponent bandcamp_embed_track %}
 
 {% component html_only() %}{{ body | safe }}{% endcomponent html_only %}

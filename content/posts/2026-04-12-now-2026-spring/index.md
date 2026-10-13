@@ -77,7 +77,7 @@ I really enjoyed their music in 2025, but I won't be supporting them anymore.
 
 ### Top tunes
 
-{{ <bandcamp_embed album_id="2777761805" album_url="https://agriculturemusic.bandcamp.com/album/the-spiritual-sound" text="The Spiritual Sound by Agriculture" /> }}
+{{ <bandcamp_embed_album album_id="2777761805" album_url="https://agriculturemusic.bandcamp.com/album/the-spiritual-sound" text="The Spiritual Sound by Agriculture" /> }}
 
 
 ## This website

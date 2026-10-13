@@ -446,6 +446,11 @@ p {
     height: 470px;
 }
 
+.bandcamp-embed-track {
+    width: 100%;
+    height: 120px;
+}
+
 /* Required by Giallo (Zola syntax highlighter) */
 .giallo-l {
     display: inline-block;

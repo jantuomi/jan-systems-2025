@@ -36,8 +36,12 @@
 => {{ img_src }} {{ alt }}
 {% endcomponent fig %}
 
-{% component bandcamp_embed(album_id, album_url, text) %}
+{% component bandcamp_embed_album(album_id, album_url, text) %}
 => {{ album_url }} {{ text }}
-{% endcomponent bandcamp_embed %}
+{% endcomponent bandcamp_embed_album %}
+
+{% component bandcamp_embed_track(album_id, track_id, album_url, text) %}
+=> {{ album_url }} {{ text }}
+{% endcomponent bandcamp_embed_track %}
 
 {% component html_only() %}{% endcomponent html_only %}
